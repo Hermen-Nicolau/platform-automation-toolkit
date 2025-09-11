@@ -1,0 +1,58 @@
+--- ./compare-configs-outputs/current-cf-10.0.1.yml	2025-09-11 14:35:29
++++ ./compare-configs-outputs/new-cf-10.0.6.yml	2025-09-11 14:35:24
+@@ -11,6 +11,8 @@
+     value: ((cloud_controller_allow_app_ssh_access))
+   .cloud_controller.apps_domain:
+     value: ((cloud_controller_apps_domain))
++  .cloud_controller.asgs_with_commas:
++    value: ((cloud_controller_asgs_with_commas))
+   .cloud_controller.default_app_memory:
+     value: ((cloud_controller_default_app_memory))
+   .cloud_controller.default_app_ssh_access:
+@@ -47,8 +49,6 @@
+     value: ((mysql_prevent_node_auto_rejoin))
+   .mysql.remote_admin_access:
+     value: ((mysql_remote_admin_access))
+-  .mysql_monitor.recipient_email:
+-    value: ((mysql_monitor_recipient_email))
+   .mysql_proxy.enable_inactive_mysql_port:
+     value: ((mysql_proxy_enable_inactive_mysql_port))
+   .mysql_proxy.shutdown_delay:
+@@ -160,6 +160,8 @@
+     value: ((disable_diego_cells))
+   .properties.disable_logs_in_firehose:
+     value: ((disable_logs_in_firehose))
++  .properties.enable_container_network_metrics:
++    value: ((enable_container_network_metrics))
+   .properties.enable_cpu_throttling:
+     value: ((enable_cpu_throttling))
+   .properties.enable_garden_containerd_mode:
+@@ -204,6 +206,8 @@
+     value: enable
+   .properties.mysql_activity_logging.enable.audit_logging_events:
+     value: ((mysql_activity_logging_enable_audit_logging_events))
++  .properties.nats_debug:
++    value: ((nats_debug))
+   .properties.nats_enabled_endpoints:
+     value: https
+   .properties.networking_poe_ssl_certs:
+@@ -222,6 +226,8 @@
+     value: enable
+   .properties.otel_collector_beta_features_enabled:
+     value: ((otel_collector_beta_features_enabled))
++  .properties.policy_server_asg_syncer_interval:
++    value: ((policy_server_asg_syncer_interval))
+   .properties.push_apps_manager_app_poll_interval:
+     value: ((push_apps_manager_app_poll_interval))
+   .properties.push_apps_manager_buildpack:
+@@ -337,6 +343,10 @@
+     value: ((uaa_session_cookie_max_age))
+   .properties.uaa_session_idle_timeout:
+     value: ((uaa_session_idle_timeout))
++  .properties.vxlan_policy_agent_asg_update_interval:
++    value: ((vxlan_policy_agent_asg_update_interval))
++  .properties.vxlan_policy_agent_http_client_timeout:
++    value: ((vxlan_policy_agent_http_client_timeout))
+   .router.disable_insecure_cookies:
+     value: ((router_disable_insecure_cookies))
+   .router.drain_timeout:

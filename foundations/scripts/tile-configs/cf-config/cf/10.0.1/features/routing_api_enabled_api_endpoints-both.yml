@@ -1,0 +1,5 @@
+- type: replace
+  path: /product-properties/.properties.routing_api_enabled_api_endpoints?
+  value:
+    value: both
+    selected_option: both

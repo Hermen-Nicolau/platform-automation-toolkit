@@ -1,0 +1,17 @@
+- type: replace
+  path: /product-properties/.properties.gorouter_customize_metrics_reporting?
+  value:
+    value: enable
+    selected_option: enable
+- type: replace
+  path: /product-properties/.properties.gorouter_customize_metrics_reporting.enable.per_request_metrics?
+  value:
+    value: ((gorouter_customize_metrics_reporting_enable_per_request_metrics))
+- type: replace
+  path: /product-properties/.properties.gorouter_customize_metrics_reporting.enable.http_start_stop_server?
+  value:
+    value: ((gorouter_customize_metrics_reporting_enable_http_start_stop_server))
+- type: replace
+  path: /product-properties/.properties.gorouter_customize_metrics_reporting.enable.http_start_stop_client?
+  value:
+    value: ((gorouter_customize_metrics_reporting_enable_http_start_stop_client))

@@ -1,0 +1,5 @@
+- type: replace
+  path: /product-properties/.properties.nats_enabled_endpoints?
+  value:
+    value: https_and_http
+    selected_option: https_and_http

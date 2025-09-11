@@ -1,0 +1,3 @@
+- type: replace
+  path: /resource-config?/log_cache?/elb_names?
+  value: ((resource-var-log_cache_elb_names))

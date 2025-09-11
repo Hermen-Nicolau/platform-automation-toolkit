@@ -1,0 +1,3 @@
+- type: replace
+  path: /resource-config?/clock_global?/elb_names?
+  value: ((resource-var-clock_global_elb_names))

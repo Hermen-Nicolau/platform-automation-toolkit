@@ -1,0 +1,5 @@
+- type: replace
+  path: /product-properties/.properties.isolated_routing?
+  value:
+    value: reject_all
+    selected_option: reject_all

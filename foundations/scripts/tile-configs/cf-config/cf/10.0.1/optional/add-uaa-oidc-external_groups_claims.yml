@@ -1,0 +1,4 @@
+- type: replace
+  path: /product-properties/.properties.uaa.oidc.external_groups_claims?
+  value:
+    value: ((uaa_oidc_external_groups_claims))

@@ -1,0 +1,5 @@
+- type: replace
+  path: /product-properties/.properties.push_apps_manager_offline_tools?
+  value:
+    value:
+    - enable_offline_tools

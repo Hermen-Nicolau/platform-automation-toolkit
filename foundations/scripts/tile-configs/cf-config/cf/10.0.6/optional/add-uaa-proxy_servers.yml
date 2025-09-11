@@ -1,0 +1,4 @@
+- type: replace
+  path: /product-properties/.uaa.proxy_servers?
+  value:
+    value: ((uaa_proxy_servers))

@@ -1,0 +1,8 @@
+---
+pivnet-api-token: ((pivnet-api-token))
+pivnet-file-glob: "cf*.pivotal"
+pivnet-product-slug: "elastic-runtime"
+current-product-version: "10.0.1"
+new-product-version: "10.0.6"
+
+

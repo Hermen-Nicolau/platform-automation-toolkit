@@ -1,0 +1,5 @@
+- type: replace
+  path: /product-properties/.properties.push_apps_manager_cf_cli_packages?
+  value:
+    value: cf_cli_v7
+    selected_option: cf_cli_v7

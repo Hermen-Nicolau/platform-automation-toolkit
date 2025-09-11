@@ -1,0 +1,5 @@
+- type: replace
+  path: /product-properties/.properties.router_redact_query_parameters?
+  value:
+    value: hash
+    selected_option: hash

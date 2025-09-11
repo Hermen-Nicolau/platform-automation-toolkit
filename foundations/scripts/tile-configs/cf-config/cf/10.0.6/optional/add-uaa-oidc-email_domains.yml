@@ -1,0 +1,4 @@
+- type: replace
+  path: /product-properties/.properties.uaa.oidc.email_domains?
+  value:
+    value: ((uaa_oidc_email_domains))

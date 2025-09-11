@@ -1,0 +1,3 @@
+- type: replace
+  path: /resource-config?/diego_brain?/nsx_security_groups?
+  value: ((resource-var-diego_brain_nsx_security_groups))
