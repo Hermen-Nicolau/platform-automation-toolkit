@@ -1,0 +1,6 @@
+- type: replace
+  path: /product-properties/.properties.grafana_route.manual.ssl_certificates?
+  value:
+    value:
+      cert_pem: ((grafana_route_manual_ssl_certificates_certificate))
+      private_key_pem: ((grafana_route_manual_ssl_certificates_privatekey))

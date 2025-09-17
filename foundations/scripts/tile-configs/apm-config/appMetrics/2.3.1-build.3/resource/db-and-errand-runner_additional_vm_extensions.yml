@@ -1,0 +1,3 @@
+- type: replace
+  path: /resource-config?/db-and-errand-runner?/additional_vm_extensions?
+  value: ((resource-var-db-and-errand-runner_additional_vm_extensions))

@@ -1,0 +1,4 @@
+- type: replace
+  path: /product-properties/.pas-exporter-gauge.static_ips?
+  value:
+    value: ((pas-exporter-gauge_static_ips))

@@ -1,0 +1,4 @@
+- type: replace
+  path: /product-properties/.properties.exclude_instance_groups?
+  value:
+    value: ((exclude_instance_groups))

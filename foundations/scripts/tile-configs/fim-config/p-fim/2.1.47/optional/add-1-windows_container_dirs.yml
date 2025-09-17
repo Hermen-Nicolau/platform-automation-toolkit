@@ -1,0 +1,5 @@
+- type: replace
+  path: /product-properties/.properties.windows_container_dirs?
+  value:
+    value:
+    - path: ((windows_container_dirs_0_path))

@@ -1,0 +1,9 @@
+- type: replace
+  path: /product-properties/.properties.smtp?
+  value:
+    value: enabled
+    selected_option: enabled
+- type: replace
+  path: /product-properties/.properties.smtp.enabled.skip_verify?
+  value:
+    value: ((smtp_enabled_skip_verify))

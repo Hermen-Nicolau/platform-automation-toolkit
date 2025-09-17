@@ -1,0 +1,10 @@
+- type: replace
+  path: /product-properties/.properties.windows_ignored_patterns?
+  value:
+    value:
+    - regex: ((windows_ignored_patterns_0_regex))
+    - regex: ((windows_ignored_patterns_1_regex))
+    - regex: ((windows_ignored_patterns_2_regex))
+    - regex: ((windows_ignored_patterns_3_regex))
+    - regex: ((windows_ignored_patterns_4_regex))
+    - regex: ((windows_ignored_patterns_5_regex))

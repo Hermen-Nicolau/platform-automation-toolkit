@@ -1,0 +1,34 @@
+- type: replace
+  path: /product-properties/.properties.uaa?
+  value:
+    value: oidc
+    selected_option: oidc
+- type: replace
+  path: /product-properties/.properties.uaa.oidc.sso_name?
+  value:
+    value: ((uaa_oidc_sso_name))
+- type: replace
+  path: /product-properties/.properties.uaa.oidc.display_name?
+  value:
+    value: ((uaa_oidc_display_name))
+- type: replace
+  path: /product-properties/.properties.uaa.oidc.discovery_url?
+  value:
+    value: ((uaa_oidc_discovery_url))
+- type: replace
+  path: /product-properties/.properties.uaa.oidc.client_id?
+  value:
+    value: ((uaa_oidc_client_id))
+- type: replace
+  path: /product-properties/.properties.uaa.oidc.client_secret?
+  value:
+    value:
+      secret: ((uaa_oidc_client_secret))
+- type: replace
+  path: /product-properties/.properties.uaa.oidc.scopes?
+  value:
+    value: ((uaa_oidc_scopes))
+- type: replace
+  path: /product-properties/.properties.uaa.oidc.cache_jwks?
+  value:
+    value: ((uaa_oidc_cache_jwks))

@@ -1,0 +1,3 @@
+- type: replace
+  path: /resource-config?/deploy-scheduler?/nsx_security_groups?
+  value: ((resource-var-deploy-scheduler_nsx_security_groups))

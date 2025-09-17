@@ -1,0 +1,3 @@
+- type: replace
+  path: /resource-config?/isolated_router?/internet_connected?
+  value: ((resource-var-isolated_router_internet_connected))

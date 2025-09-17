@@ -1,0 +1,4 @@
+- type: replace
+  path: /product-properties/.properties.multitenant_support.enabled.detailed_metrics_query?
+  value:
+    value: ((multitenant_support_enabled_detailed_metrics_query))

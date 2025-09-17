@@ -1,0 +1,3 @@
+- type: replace
+  path: /resource-config?/pas-exporter-counter?/elb_names?
+  value: ((resource-var-pas-exporter-counter_elb_names))

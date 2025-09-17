@@ -1,0 +1,4 @@
+- type: replace
+  path: /product-properties/.isolated_diego_cell.executor_memory_capacity?
+  value:
+    value: ((isolated_diego_cell_executor_memory_capacity))

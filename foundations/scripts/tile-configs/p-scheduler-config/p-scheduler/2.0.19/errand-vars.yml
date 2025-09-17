@@ -1,0 +1,6 @@
+create-uaa-client_post_deploy_state: default
+deploy-scheduler_post_deploy_state: default
+destroy-scheduler_pre_delete_state: default
+publicize-scheduler_post_deploy_state: default
+register-broker_post_deploy_state: default
+test-scheduler_post_deploy_state: default

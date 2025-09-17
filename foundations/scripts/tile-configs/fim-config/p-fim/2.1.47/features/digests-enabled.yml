@@ -1,0 +1,9 @@
+- type: replace
+  path: /product-properties/.properties.digests?
+  value:
+    value: enabled
+    selected_option: enabled
+- type: replace
+  path: /product-properties/.properties.digests.enabled.digest_threshold?
+  value:
+    value: ((digests_enabled_digest_threshold))

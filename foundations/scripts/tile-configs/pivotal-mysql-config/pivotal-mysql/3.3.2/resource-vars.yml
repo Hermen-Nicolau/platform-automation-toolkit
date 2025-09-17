@@ -1,0 +1,3 @@
+resource-var-dedicated-mysql-broker_instance_type: automatic
+resource-var-dedicated-mysql-broker_instances: automatic
+resource-var-dedicated-mysql-broker_max_in_flight: default

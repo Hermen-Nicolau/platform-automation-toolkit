@@ -1,0 +1,15 @@
+- type: replace
+  path: /product-properties/.tsdb.alerting_webhook_receiver_config?
+  value:
+    value:
+    - basic_auth: ((tsdb_alerting_webhook_receiver_config_0_basic_auth))
+      bearer_token:
+        secret: ((tsdb_alerting_webhook_receiver_config_0_bearer_token))
+      ca: ((tsdb_alerting_webhook_receiver_config_0_ca))
+      insecure_skip_verify: ((tsdb_alerting_webhook_receiver_config_0_insecure_skip_verify))
+      receiver_config: ((tsdb_alerting_webhook_receiver_config_0_receiver_config))
+      receiver_name: ((tsdb_alerting_webhook_receiver_config_0_receiver_name))
+      server_name: ((tsdb_alerting_webhook_receiver_config_0_server_name))
+      tls_certificates:
+        cert_pem: ((tsdb_alerting_webhook_receiver_config_0_certificate))
+        private_key_pem: ((tsdb_alerting_webhook_receiver_config_0_privatekey))

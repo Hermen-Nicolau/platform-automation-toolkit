@@ -1,0 +1,62 @@
+product-name: nr-firehose-nozzle
+network-properties:
+  network:
+    name: ((network_name))
+  other_availability_zones:
+  - name: ((singleton_availability_zone))
+  singleton_availability_zone:
+    name: ((singleton_availability_zone))
+product-properties:
+  .properties.nozzle_instances:
+    value: ((nozzle_instances))
+  .properties.nrf_cf_rabbitmq_tags:
+    value: ((nrf_cf_rabbitmq_tags))
+  .properties.nrf_cf_skip_ssl:
+    value: ((nrf_cf_skip_ssl))
+  .properties.nrf_enabled_envelope_types:
+    value: ((nrf_enabled_envelope_types))
+  .properties.nrf_firehose_cache_duration_mins:
+    value: ((nrf_firehose_cache_duration_mins))
+  .properties.nrf_firehose_cache_update_interval_secs:
+    value: ((nrf_firehose_cache_update_interval_secs))
+  .properties.nrf_firehose_cache_write_buffer_size:
+    value: ((nrf_firehose_cache_write_buffer_size))
+  .properties.nrf_firehose_diode_buffer:
+    value: ((nrf_firehose_diode_buffer))
+  .properties.nrf_firehose_http_timeout_mins:
+    value: ((nrf_firehose_http_timeout_mins))
+  .properties.nrf_firehose_id:
+    value: ((nrf_firehose_id))
+  .properties.nrf_firehose_restart_thresh_secs:
+    value: ((nrf_firehose_restart_thresh_secs))
+  .properties.nrf_log_level:
+    value: ((nrf_log_level))
+  .properties.nrf_logs_http:
+    value: ((nrf_logs_http))
+  .properties.nrf_logs_logmessage:
+    value: ((nrf_logs_logmessage))
+  .properties.nrf_newrelic_account_id:
+    value: ((nrf_newrelic_account_id))
+  .properties.nrf_newrelic_account_region:
+    value: ((nrf_newrelic_account_region))
+  .properties.nrf_newrelic_drain_interval:
+    value: ((nrf_newrelic_drain_interval))
+  .properties.nrf_newrelic_insert_key:
+    value:
+      secret: ((nrf_newrelic_insert_key))
+  .properties.nrf_tracer:
+    value: ((nrf_tracer))
+resource-config:
+  delete-all:
+    instance_type:
+      id: ((resource-var-delete-all_instance_type))
+    max_in_flight: ((resource-var-delete-all_max_in_flight))
+  deploy-all:
+    instance_type:
+      id: ((resource-var-deploy-all_instance_type))
+    max_in_flight: ((resource-var-deploy-all_max_in_flight))
+errand-config:
+  delete-all:
+    pre-delete-state: ((delete-all_pre_delete_state))
+  deploy-all:
+    post-deploy-state: ((deploy-all_post_deploy_state))

@@ -1,0 +1,3 @@
+- type: replace
+  path: /resource-config?/register-broker?/elb_names?
+  value: ((resource-var-register-broker_elb_names))

@@ -1,0 +1,8 @@
+- type: replace
+  path: /product-properties/.properties.router_sticky_session_cookie_names?
+  value:
+    value:
+    - name: ((router_sticky_session_cookie_names_0_name))
+    - name: ((router_sticky_session_cookie_names_1_name))
+    - name: ((router_sticky_session_cookie_names_2_name))
+    - name: ((router_sticky_session_cookie_names_3_name))

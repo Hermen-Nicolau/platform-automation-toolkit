@@ -1,0 +1,9 @@
+- type: replace
+  path: /product-properties/.properties.low_severity_patterns?
+  value:
+    value:
+    - regex: ((low_severity_patterns_0_regex))
+    - regex: ((low_severity_patterns_1_regex))
+    - regex: ((low_severity_patterns_2_regex))
+    - regex: ((low_severity_patterns_3_regex))
+    - regex: ((low_severity_patterns_4_regex))

@@ -1,0 +1,9 @@
+- type: replace
+  path: /product-properties/.properties.cache?
+  value:
+    value: enabled
+    selected_option: enabled
+- type: replace
+  path: /product-properties/.properties.cache.enabled.cache_size?
+  value:
+    value: ((cache_enabled_cache_size))

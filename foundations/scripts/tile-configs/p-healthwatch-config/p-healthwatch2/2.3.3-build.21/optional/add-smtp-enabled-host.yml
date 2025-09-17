@@ -1,0 +1,4 @@
+- type: replace
+  path: /product-properties/.properties.smtp.enabled.host?
+  value:
+    value: ((smtp_enabled_host))

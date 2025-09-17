@@ -1,5 +1,5 @@
---- ./compare-configs-outputs/current-cf-10.0.1.yml	2025-09-11 14:35:29
-+++ ./compare-configs-outputs/new-cf-10.0.6.yml	2025-09-11 14:35:24
+--- ./compare-configs-outputs/current-cf-10.0.1.yml	2025-09-12 06:26:30
++++ ./compare-configs-outputs/new-cf-10.0.6.yml	2025-09-12 06:26:25
 @@ -11,6 +11,8 @@
      value: ((cloud_controller_allow_app_ssh_access))
    .cloud_controller.apps_domain:

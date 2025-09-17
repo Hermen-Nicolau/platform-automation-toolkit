@@ -1,0 +1,9 @@
+- type: replace
+  path: /product-properties/.properties.dashboard_discovery_tkgi?
+  value:
+    value: enabled
+    selected_option: enabled
+- type: replace
+  path: /product-properties/.properties.dashboard_discovery_tkgi.enabled.tkgi_version?
+  value:
+    value: ((dashboard_discovery_tkgi_enabled_tkgi_version))

@@ -1,0 +1,81 @@
+product-name: p-redis
+network-properties:
+  network:
+    name: ((network_name))
+  service_network:
+    name: ((service_network_name))
+  other_availability_zones:
+  - name: ((singleton_availability_zone))
+  singleton_availability_zone:
+    name: ((singleton_availability_zone))
+product-properties:
+  .cf-redis-broker.redis_maxmemory:
+    value: ((cf-redis-broker_redis_maxmemory))
+  .cf-redis-broker.service_instance_limit:
+    value: ((cf-redis-broker_service_instance_limit))
+  .properties.backups_selector:
+    value: No Backups
+  .properties.canary_org_space_selector:
+    value: "No"
+  .properties.metrics_polling_interval:
+    value: ((metrics_polling_interval))
+  .properties.on_demand_secure_bindings_selector:
+    value: "No"
+  .properties.service_gateway_ports_range:
+    value: ((service_gateway_ports_range))
+  .properties.tls_enable_selector:
+    value: Optional - Developers may configure their apps to use TLS.
+  .properties.tls_versions:
+    value:
+    - tlsv1.2
+    - tlsv1.3
+  .redis-on-demand-broker.enable_config_api:
+    value: ((redis-on-demand-broker_enable_config_api))
+  .redis-on-demand-broker.maximum_parallel_upgrades:
+    value: ((redis-on-demand-broker_maximum_parallel_upgrades))
+  .redis-on-demand-broker.service_instance_limit:
+    value: ((redis-on-demand-broker_service_instance_limit))
+  .redis-on-demand-broker.upgrade_canary_number:
+    value: ((redis-on-demand-broker_upgrade_canary_number))
+resource-config:
+  cf-redis-broker:
+    instance_type:
+      id: ((resource-var-cf-redis-broker_instance_type))
+    persistent_disk:
+      size_mb: ((resource-var-cf-redis-broker_persistent_disk_size))
+    max_in_flight: ((resource-var-cf-redis-broker_max_in_flight))
+  redis-on-demand-broker:
+    instance_type:
+      id: ((resource-var-redis-on-demand-broker_instance_type))
+    instances: ((resource-var-redis-on-demand-broker_instances))
+    max_in_flight: ((resource-var-redis-on-demand-broker_max_in_flight))
+syslog-properties:
+  enabled: ((syslog_enabled))
+  address: ((syslog_address))
+  port: ((syslog_port))
+  transport_protocol: ((syslog_transport_protocol))
+  tls_enabled: ((syslog_tls_enabled))
+  permitted_peer: ((syslog_permitted_peer))
+  ssl_ca_certificate: ((syslog_ssl_ca_certificate))
+  queue_size: ((syslog_queue_size))
+  forward_debug_logs: ((syslog_forward_debug_logs))
+  custom_rsyslog_configuration: ((syslog_custom_rsyslog_configuration))
+errand-config:
+  broker-deregistrar:
+    pre-delete-state: ((broker-deregistrar_pre_delete_state))
+  broker-registrar:
+    post-deploy-state: ((broker-registrar_post_deploy_state))
+  delete-all-service-instances-and-deregister-broker:
+    pre-delete-state: ((delete-all-service-instances-and-deregister-broker_pre_delete_state))
+  on-demand-broker-smoke-tests:
+    post-deploy-state: ((on-demand-broker-smoke-tests_post_deploy_state))
+  orphan-deployments:
+    post-deploy-state: ((orphan-deployments_post_deploy_state))
+  recreate-all-service-instances:
+    post-deploy-state: ((recreate-all-service-instances_post_deploy_state))
+  register-broker:
+    post-deploy-state: ((register-broker_post_deploy_state))
+  smoke-tests:
+    post-deploy-state: ((smoke-tests_post_deploy_state))
+  upgrade-all-service-instances:
+    post-deploy-state: ((upgrade-all-service-instances_post_deploy_state))

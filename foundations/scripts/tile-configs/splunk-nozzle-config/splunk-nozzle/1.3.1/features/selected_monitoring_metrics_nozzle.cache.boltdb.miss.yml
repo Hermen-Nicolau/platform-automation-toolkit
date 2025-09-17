@@ -1,0 +1,3 @@
+- type: replace
+  path: /product-properties/.properties.selected_monitoring_metrics?/value/-
+  value: nozzle.cache.boltdb.miss

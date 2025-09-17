@@ -1,0 +1,4 @@
+- type: replace
+  path: /product-properties/.properties.nrf_newrelic_custom_url?
+  value:
+    value: ((nrf_newrelic_custom_url))

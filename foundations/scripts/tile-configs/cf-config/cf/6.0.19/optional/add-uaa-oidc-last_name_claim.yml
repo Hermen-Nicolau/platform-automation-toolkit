@@ -1,0 +1,4 @@
+- type: replace
+  path: /product-properties/.properties.uaa.oidc.last_name_claim?
+  value:
+    value: ((uaa_oidc_last_name_claim))

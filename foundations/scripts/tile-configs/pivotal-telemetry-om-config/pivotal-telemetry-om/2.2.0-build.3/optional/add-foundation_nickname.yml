@@ -1,0 +1,4 @@
+- type: replace
+  path: /product-properties/.properties.foundation_nickname?
+  value:
+    value: ((foundation_nickname))

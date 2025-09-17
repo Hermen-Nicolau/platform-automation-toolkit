@@ -1,0 +1,4 @@
+- type: replace
+  path: /product-properties/.properties.system_logging.enabled.tls_enabled?
+  value:
+    value: ((system_logging_enabled_tls_enabled))

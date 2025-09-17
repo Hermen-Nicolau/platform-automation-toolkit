@@ -1,0 +1,17 @@
+nozzle_instances: 2
+nrf_cf_rabbitmq_tags: true
+nrf_cf_skip_ssl: true
+nrf_enabled_envelope_types: ContainerMetric,CounterEvent,HttpStartStop,LogMessage,ValueMetric
+nrf_firehose_cache_duration_mins: 30
+nrf_firehose_cache_update_interval_secs: 60
+nrf_firehose_cache_write_buffer_size: 2048
+nrf_firehose_diode_buffer: 8192
+nrf_firehose_http_timeout_mins: 16
+nrf_firehose_id: newrelic.firehose
+nrf_firehose_restart_thresh_secs: 15
+nrf_log_level: INFO
+nrf_logs_http: false
+nrf_logs_logmessage: false
+nrf_newrelic_account_region: US
+nrf_newrelic_drain_interval: 59s
+nrf_tracer: false

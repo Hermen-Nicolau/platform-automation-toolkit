@@ -1,0 +1,3 @@
+- type: replace
+  path: /resource-config?/cert-expiration-exporter?/additional_vm_extensions?
+  value: ((resource-var-cert-expiration-exporter_additional_vm_extensions))

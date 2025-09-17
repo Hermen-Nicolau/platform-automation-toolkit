@@ -1,0 +1,4 @@
+bosh-health-exporter_health_check_az: ""
+network_name: ""
+service_network_name: ""
+singleton_availability_zone: ""

@@ -1,0 +1,4 @@
+- type: replace
+  path: /product-properties/.properties.smtp.enabled.ehlo_identity?
+  value:
+    value: ((smtp_enabled_ehlo_identity))

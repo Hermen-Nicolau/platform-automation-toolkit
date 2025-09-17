@@ -1,0 +1,4 @@
+- type: replace
+  path: /product-properties/.properties.multitenant_support.enabled.override_advanced_config?
+  value:
+    value: ((multitenant_support_enabled_override_advanced_config))

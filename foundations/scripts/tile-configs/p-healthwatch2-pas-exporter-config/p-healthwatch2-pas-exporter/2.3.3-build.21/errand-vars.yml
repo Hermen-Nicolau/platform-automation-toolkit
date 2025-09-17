@@ -1,0 +1,3 @@
+bosh-cleanup-wait_pre_delete_state: default
+delete-cf-sli-user_pre_delete_state: default
+smoke-test_post_deploy_state: default

@@ -1,0 +1,7 @@
+- type: replace
+  path: /product-properties/.properties.tls_enable_selector?
+  value:
+    value: Enforced - All new and existing On Demand service instances will be configured
+      to use TLS. On applying this setting, any applications that used non-TLS bindings
+      will require re-binding and must support TLS connections.
+    selected_option: enforced

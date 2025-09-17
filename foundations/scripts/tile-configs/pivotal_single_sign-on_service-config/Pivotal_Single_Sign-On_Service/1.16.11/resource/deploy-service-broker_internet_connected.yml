@@ -1,0 +1,3 @@
+- type: replace
+  path: /resource-config?/deploy-service-broker?/internet_connected?
+  value: ((resource-var-deploy-service-broker_internet_connected))

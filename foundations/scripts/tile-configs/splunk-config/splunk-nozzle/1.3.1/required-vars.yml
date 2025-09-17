@@ -1,0 +1,7 @@
+api_endpoint: ""
+client_id: ""
+client_secret: ""
+network_name: ""
+singleton_availability_zone: ""
+splunk_host: ""
+splunk_token: ""

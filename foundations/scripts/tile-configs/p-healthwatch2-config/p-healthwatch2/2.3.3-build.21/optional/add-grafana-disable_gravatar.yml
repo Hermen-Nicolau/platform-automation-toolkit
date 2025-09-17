@@ -1,0 +1,4 @@
+- type: replace
+  path: /product-properties/.grafana.disable_gravatar?
+  value:
+    value: ((grafana_disable_gravatar))

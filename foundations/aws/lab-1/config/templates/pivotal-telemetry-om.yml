@@ -1,0 +1,38 @@
+product-name: pivotal-telemetry-om
+network-properties:
+  network:
+    name: ((network_name))
+  other_availability_zones:
+  - name: ((singleton_availability_zone))
+  singleton_availability_zone:
+    name: ((singleton_availability_zone))
+product-properties:
+  .properties.api_key:
+    value:
+      secret: ((api_key))
+  .properties.audit_mode:
+    value: ((audit_mode))
+  .properties.env_type:
+    value: ((env_type))
+  .properties.opsmanager_insecure_skip_tls_verify:
+    value: ((opsmanager_insecure_skip_tls_verify))
+  .properties.proxy_selector:
+    value: Disabled
+  .properties.usage_service_insecure_skip_tls_verify:
+    value: ((usage_service_insecure_skip_tls_verify))
+resource-config:
+  telemetry-centralizer:
+    instance_type:
+      id: ((resource-var-telemetry-centralizer_instance_type))
+    max_in_flight: ((resource-var-telemetry-centralizer_max_in_flight))
+syslog-properties:
+  enabled: ((syslog_enabled))
+  address: ((syslog_address))
+  port: ((syslog_port))
+  transport_protocol: ((syslog_transport_protocol))
+  tls_enabled: ((syslog_tls_enabled))
+  permitted_peer: ((syslog_permitted_peer))
+  ssl_ca_certificate: ((syslog_ssl_ca_certificate))
+  queue_size: ((syslog_queue_size))
+  forward_debug_logs: ((syslog_forward_debug_logs))
+  custom_rsyslog_configuration: ((syslog_custom_rsyslog_configuration))

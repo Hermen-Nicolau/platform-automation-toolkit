@@ -1,0 +1,3 @@
+- type: replace
+  path: /resource-config?/p-dataflow-errands?/nsx_security_groups?
+  value: ((resource-var-p-dataflow-errands_nsx_security_groups))

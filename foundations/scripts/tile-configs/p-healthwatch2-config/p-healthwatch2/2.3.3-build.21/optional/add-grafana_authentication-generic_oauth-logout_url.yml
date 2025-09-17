@@ -1,0 +1,4 @@
+- type: replace
+  path: /product-properties/.properties.grafana_authentication.generic_oauth.logout_url?
+  value:
+    value: ((grafana_authentication_generic_oauth_logout_url))

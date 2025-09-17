@@ -1,0 +1,4 @@
+- type: replace
+  path: /product-properties/.properties.keep_alive_timer?
+  value:
+    value: ((keep_alive_timer))

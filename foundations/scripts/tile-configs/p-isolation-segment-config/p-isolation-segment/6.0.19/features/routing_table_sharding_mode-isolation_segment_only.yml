@@ -1,0 +1,5 @@
+- type: replace
+  path: /product-properties/.properties.routing_table_sharding_mode?
+  value:
+    value: isolation_segment_only
+    selected_option: isolation_segment_only

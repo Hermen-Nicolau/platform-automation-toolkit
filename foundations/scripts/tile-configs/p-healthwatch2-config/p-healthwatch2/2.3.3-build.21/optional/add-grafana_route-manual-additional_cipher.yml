@@ -1,0 +1,4 @@
+- type: replace
+  path: /product-properties/.properties.grafana_route.manual.additional_cipher?
+  value:
+    value: ((grafana_route_manual_additional_cipher))

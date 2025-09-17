@@ -1,0 +1,8 @@
+cpu_limit: 10
+format: CEF:0|cloud_foundry|fim|1.0.0|{{.OpType}}|file integrity monitoring event|{{.Severity}}|
+  {{.KeyValues}}
+format_for_windows: CEF:0|cloud_foundry|fim|1.0.0|{{.OpType}}|file integrity monitoring
+  event|{{.Severity}}| {{.KeyValues}}
+heartbeat_interval: 600
+heartbeat_interval_for_windows: 600
+memory_limit: 536870912

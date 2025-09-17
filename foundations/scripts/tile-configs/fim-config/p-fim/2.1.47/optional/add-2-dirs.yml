@@ -1,0 +1,6 @@
+- type: replace
+  path: /product-properties/.properties.dirs?
+  value:
+    value:
+    - path: ((dirs_0_path))
+    - path: ((dirs_1_path))

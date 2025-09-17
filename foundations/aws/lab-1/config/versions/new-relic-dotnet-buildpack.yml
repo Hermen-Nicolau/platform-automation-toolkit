@@ -1,0 +1,8 @@
+---
+pivnet-api-token: ((pivnet_token))
+pivnet-product-slug: new-relic-dotnet-buildpack
+product-version: ((nr-dotnet-buildpack-version))
+# stemcell-iaas: aws
+file-glob: "*.pivotal"
+# stemcell-version: ((jammy-stemcell-version))   # specific stemcell version to download
+# stemcell-heavy: true    

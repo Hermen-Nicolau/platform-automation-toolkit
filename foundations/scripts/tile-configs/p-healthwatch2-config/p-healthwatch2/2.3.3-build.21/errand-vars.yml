@@ -1,0 +1,2 @@
+smoke-test_post_deploy_state: default
+update-admin-password_post_deploy_state: default

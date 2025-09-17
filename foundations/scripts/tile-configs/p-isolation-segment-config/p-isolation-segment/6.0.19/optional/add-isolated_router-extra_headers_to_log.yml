@@ -1,0 +1,4 @@
+- type: replace
+  path: /product-properties/.isolated_router.extra_headers_to_log?
+  value:
+    value: ((isolated_router_extra_headers_to_log))

@@ -1,0 +1,4 @@
+- type: replace
+  path: /product-properties/.properties.extra_fields?
+  value:
+    value: ((extra_fields))

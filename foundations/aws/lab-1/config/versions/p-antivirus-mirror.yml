@@ -1,0 +1,8 @@
+---
+pivnet-api-token: ((pivnet_token))
+pivnet-product-slug: p-clamav-addon
+file-glob: "p-antivirus-mirror-*.pivotal"
+product-version: ((antivirus-version))
+# stemcell-iaas: aws
+# stemcell-version: ((jammy-stemcell-version))   # specific stemcell version to download
+#stemcell-heavy: true

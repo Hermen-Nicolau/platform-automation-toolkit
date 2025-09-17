@@ -1,0 +1,4 @@
+- type: replace
+  path: /product-properties/.properties.platform_tags?
+  value:
+    value: ((platform_tags))

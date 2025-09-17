@@ -1,0 +1,74 @@
+- type: replace
+  path: /product-properties/.properties.scrape_configs?
+  value:
+    value:
+    - ca: ((scrape_configs_0_ca))
+      insecure_skip_verify: ((scrape_configs_0_insecure_skip_verify))
+      scrape_job: ((scrape_configs_0_scrape_job))
+      server_name: ((scrape_configs_0_server_name))
+      tls_certificates:
+        cert_pem: ((scrape_configs_0_certificate))
+        private_key_pem: ((scrape_configs_0_privatekey))
+    - ca: ((scrape_configs_1_ca))
+      insecure_skip_verify: ((scrape_configs_1_insecure_skip_verify))
+      scrape_job: ((scrape_configs_1_scrape_job))
+      server_name: ((scrape_configs_1_server_name))
+      tls_certificates:
+        cert_pem: ((scrape_configs_1_certificate))
+        private_key_pem: ((scrape_configs_1_privatekey))
+    - ca: ((scrape_configs_2_ca))
+      insecure_skip_verify: ((scrape_configs_2_insecure_skip_verify))
+      scrape_job: ((scrape_configs_2_scrape_job))
+      server_name: ((scrape_configs_2_server_name))
+      tls_certificates:
+        cert_pem: ((scrape_configs_2_certificate))
+        private_key_pem: ((scrape_configs_2_privatekey))
+    - ca: ((scrape_configs_3_ca))
+      insecure_skip_verify: ((scrape_configs_3_insecure_skip_verify))
+      scrape_job: ((scrape_configs_3_scrape_job))
+      server_name: ((scrape_configs_3_server_name))
+      tls_certificates:
+        cert_pem: ((scrape_configs_3_certificate))
+        private_key_pem: ((scrape_configs_3_privatekey))
+    - ca: ((scrape_configs_4_ca))
+      insecure_skip_verify: ((scrape_configs_4_insecure_skip_verify))
+      scrape_job: ((scrape_configs_4_scrape_job))
+      server_name: ((scrape_configs_4_server_name))
+      tls_certificates:
+        cert_pem: ((scrape_configs_4_certificate))
+        private_key_pem: ((scrape_configs_4_privatekey))
+    - ca: ((scrape_configs_5_ca))
+      insecure_skip_verify: ((scrape_configs_5_insecure_skip_verify))
+      scrape_job: ((scrape_configs_5_scrape_job))
+      server_name: ((scrape_configs_5_server_name))
+      tls_certificates:
+        cert_pem: ((scrape_configs_5_certificate))
+        private_key_pem: ((scrape_configs_5_privatekey))
+    - ca: ((scrape_configs_6_ca))
+      insecure_skip_verify: ((scrape_configs_6_insecure_skip_verify))
+      scrape_job: ((scrape_configs_6_scrape_job))
+      server_name: ((scrape_configs_6_server_name))
+      tls_certificates:
+        cert_pem: ((scrape_configs_6_certificate))
+        private_key_pem: ((scrape_configs_6_privatekey))
+    - ca: ((scrape_configs_7_ca))
+      insecure_skip_verify: ((scrape_configs_7_insecure_skip_verify))
+      scrape_job: ((scrape_configs_7_scrape_job))
+      server_name: ((scrape_configs_7_server_name))
+      tls_certificates:
+        cert_pem: ((scrape_configs_7_certificate))
+        private_key_pem: ((scrape_configs_7_privatekey))
+    - ca: ((scrape_configs_8_ca))
+      insecure_skip_verify: ((scrape_configs_8_insecure_skip_verify))
+      scrape_job: ((scrape_configs_8_scrape_job))
+      server_name: ((scrape_configs_8_server_name))
+      tls_certificates:
+        cert_pem: ((scrape_configs_8_certificate))
+        private_key_pem: ((scrape_configs_8_privatekey))
+    - ca: ((scrape_configs_9_ca))
+      insecure_skip_verify: ((scrape_configs_9_insecure_skip_verify))
+      scrape_job: ((scrape_configs_9_scrape_job))
+      server_name: ((scrape_configs_9_server_name))
+      tls_certificates:
+        cert_pem: ((scrape_configs_9_certificate))
+        private_key_pem: ((scrape_configs_9_privatekey))

@@ -1,0 +1,5 @@
+- type: replace
+  path: /product-properties/.properties.enforce_cpu_limit?
+  value:
+    value: enabled
+    selected_option: enabled

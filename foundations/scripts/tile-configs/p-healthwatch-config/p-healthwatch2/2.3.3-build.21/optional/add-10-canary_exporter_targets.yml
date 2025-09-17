@@ -1,0 +1,14 @@
+- type: replace
+  path: /product-properties/.properties.canary_exporter_targets?
+  value:
+    value:
+    - address: ((canary_exporter_targets_0_address))
+    - address: ((canary_exporter_targets_1_address))
+    - address: ((canary_exporter_targets_2_address))
+    - address: ((canary_exporter_targets_3_address))
+    - address: ((canary_exporter_targets_4_address))
+    - address: ((canary_exporter_targets_5_address))
+    - address: ((canary_exporter_targets_6_address))
+    - address: ((canary_exporter_targets_7_address))
+    - address: ((canary_exporter_targets_8_address))
+    - address: ((canary_exporter_targets_9_address))

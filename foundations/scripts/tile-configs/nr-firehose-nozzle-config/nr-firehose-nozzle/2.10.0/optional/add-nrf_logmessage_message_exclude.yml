@@ -1,0 +1,4 @@
+- type: replace
+  path: /product-properties/.properties.nrf_logmessage_message_exclude?
+  value:
+    value: ((nrf_logmessage_message_exclude))

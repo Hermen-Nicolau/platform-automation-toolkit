@@ -1,0 +1,4 @@
+- type: replace
+  path: /product-properties/.grafana.enable_router_logging?
+  value:
+    value: ((grafana_enable_router_logging))

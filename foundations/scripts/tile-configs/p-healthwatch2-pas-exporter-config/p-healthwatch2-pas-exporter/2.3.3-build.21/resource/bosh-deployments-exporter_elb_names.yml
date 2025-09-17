@@ -1,0 +1,3 @@
+- type: replace
+  path: /resource-config?/bosh-deployments-exporter?/elb_names?
+  value: ((resource-var-bosh-deployments-exporter_elb_names))

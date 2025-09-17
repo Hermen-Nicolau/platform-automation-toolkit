@@ -1,0 +1,5 @@
+- type: replace
+  path: /product-properties/.properties.bosh_context_adaptor?
+  value:
+    value: enabled
+    selected_option: enabled

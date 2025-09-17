@@ -1,0 +1,16 @@
+custom_buildpack: java_buildpack_offline
+dataflow_db_plan: db-small
+dataflow_db_service: p.mysql
+dataflow_disable_public_internet: false
+dataflow_messaging_plan: single-node
+dataflow_messaging_service: p.rabbitmq
+p_dataflow_enable_global_access_to_plans: true
+skipper_db_plan: db-small
+skipper_db_service: p.mysql
+timeout: 60
+wavefront_source_prefix: dataflow-
+create-uaa-client_post_deploy_state: default
+delete-all_pre_delete_state: default
+deploy-all_post_deploy_state: default
+resource-var-p-dataflow-errands_instance_type: automatic
+resource-var-p-dataflow-errands_max_in_flight: default

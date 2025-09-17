@@ -1,0 +1,50 @@
+product-name: p_spring-cloud-services
+network-properties:
+  network:
+    name: ((network_name))
+  other_availability_zones:
+  - name: ((singleton_availability_zone))
+  singleton_availability_zone:
+    name: ((singleton_availability_zone))
+product-properties:
+  .properties.concurrent_service_instance_upgrade:
+    value: ((concurrent_service_instance_upgrade))
+  .properties.config_server_access:
+    value: ((config_server_access))
+  .properties.config_server_credhub_enabled:
+    value: ((config_server_credhub_enabled))
+  .properties.java_buildpack:
+    value: ((java_buildpack))
+  .properties.service_completion_timeout_minutes:
+    value: ((service_completion_timeout_minutes))
+  .properties.service_key_access:
+    value: ((service_key_access))
+  .properties.service_registry_access:
+    value: ((service_registry_access))
+  .properties.stack:
+    value: ((stack))
+resource-config:
+  spring-cloud-services:
+    instance_type:
+      id: ((resource-var-spring-cloud-services_instance_type))
+    persistent_disk:
+      size_mb: ((resource-var-spring-cloud-services_persistent_disk_size))
+    max_in_flight: ((resource-var-spring-cloud-services_max_in_flight))
+syslog-properties:
+  enabled: ((syslog_enabled))
+  address: ((syslog_address))
+  port: ((syslog_port))
+  transport_protocol: ((syslog_transport_protocol))
+  tls_enabled: ((syslog_tls_enabled))
+  permitted_peer: ((syslog_permitted_peer))
+  ssl_ca_certificate: ((syslog_ssl_ca_certificate))
+  queue_size: ((syslog_queue_size))
+  forward_debug_logs: ((syslog_forward_debug_logs))
+  custom_rsyslog_configuration: ((syslog_custom_rsyslog_configuration))
+errand-config:
+  destroy-brokers:
+    pre-delete-state: ((destroy-brokers_pre_delete_state))
+  register-brokers:
+    post-deploy-state: ((register-brokers_post_deploy_state))
+  upgrade-all-instances:
+    post-deploy-state: ((upgrade-all-instances_post_deploy_state))

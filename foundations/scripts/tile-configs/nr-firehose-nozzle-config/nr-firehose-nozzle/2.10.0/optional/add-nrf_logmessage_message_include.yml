@@ -1,0 +1,4 @@
+- type: replace
+  path: /product-properties/.properties.nrf_logmessage_message_include?
+  value:
+    value: ((nrf_logmessage_message_include))

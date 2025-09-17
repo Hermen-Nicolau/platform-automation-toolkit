@@ -1,0 +1,25 @@
+- type: replace
+  path: /product-properties/.properties.grafana_authentication?
+  value:
+    value: ldap
+    selected_option: ldap
+- type: replace
+  path: /product-properties/.properties.grafana_authentication.ldap.allow_sign_up?
+  value:
+    value: ((grafana_authentication_ldap_allow_sign_up))
+- type: replace
+  path: /product-properties/.properties.grafana_authentication.ldap.host?
+  value:
+    value: ((grafana_authentication_ldap_host))
+- type: replace
+  path: /product-properties/.properties.grafana_authentication.ldap.use_ssl?
+  value:
+    value: ((grafana_authentication_ldap_use_ssl))
+- type: replace
+  path: /product-properties/.properties.grafana_authentication.ldap.start_tls?
+  value:
+    value: ((grafana_authentication_ldap_start_tls))
+- type: replace
+  path: /product-properties/.properties.grafana_authentication.ldap.ssl_skip_verify?
+  value:
+    value: ((grafana_authentication_ldap_ssl_skip_verify))

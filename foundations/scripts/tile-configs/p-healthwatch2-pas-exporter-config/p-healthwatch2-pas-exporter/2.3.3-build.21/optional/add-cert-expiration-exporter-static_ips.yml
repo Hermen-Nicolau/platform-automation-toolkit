@@ -1,0 +1,4 @@
+- type: replace
+  path: /product-properties/.cert-expiration-exporter.static_ips?
+  value:
+    value: ((cert-expiration-exporter_static_ips))

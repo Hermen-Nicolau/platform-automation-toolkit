@@ -1,0 +1,5 @@
+- type: replace
+  path: /product-properties/.properties.proxy_selector.enabled.user_input_http_proxy?
+  value:
+    value:
+      secret: ((proxy_selector_enabled_user_input_http_proxy))

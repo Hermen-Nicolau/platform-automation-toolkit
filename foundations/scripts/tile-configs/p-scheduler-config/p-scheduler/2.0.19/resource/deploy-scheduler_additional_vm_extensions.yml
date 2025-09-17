@@ -1,0 +1,3 @@
+- type: replace
+  path: /resource-config?/deploy-scheduler?/additional_vm_extensions?
+  value: ((resource-var-deploy-scheduler_additional_vm_extensions))

@@ -1,0 +1,8 @@
+---
+pivnet-api-token: ((pivnet_token))
+pivnet-product-slug: p-healthwatch
+product-version: ((healthwatch-version))
+# stemcell-iaas: aws
+file-glob: "healthwatch-pas-exporter-*.pivotal"
+# stemcell-version: ((jammy-stemcell-version))   # specific stemcell version to download
+# stemcell-heavy: true    

@@ -1,0 +1,4 @@
+- type: replace
+  path: /product-properties/.properties.no_proxy?
+  value:
+    value: ((no_proxy))

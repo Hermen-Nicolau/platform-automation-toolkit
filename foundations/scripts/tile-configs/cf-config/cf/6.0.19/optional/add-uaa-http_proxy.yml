@@ -1,0 +1,4 @@
+- type: replace
+  path: /product-properties/.uaa.http_proxy?
+  value:
+    value: ((uaa_http_proxy))

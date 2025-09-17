@@ -1,0 +1,19 @@
+- type: replace
+  path: /product-properties/.properties.database_mirrors?
+  value:
+    value: private_mirror_tls
+    selected_option: private_mirror_tls
+- type: remove
+  path: /product-properties/.properties.database_mirrors.private_mirror.mirror_urls?
+- type: replace
+  path: /product-properties/.properties.database_mirrors.private_mirror_tls.mirror_url?
+  value:
+    value: ((database_mirrors_private_mirror_tls_mirror_url))
+- type: replace
+  path: /product-properties/.properties.database_mirrors.private_mirror_tls.mirror_port?
+  value:
+    value: ((database_mirrors_private_mirror_tls_mirror_port))
+- type: replace
+  path: /product-properties/.properties.database_mirrors.private_mirror_tls.mirror_ca_certificate?
+  value:
+    value: ((database_mirrors_private_mirror_tls_mirror_ca_certificate))

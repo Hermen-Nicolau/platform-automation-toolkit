@@ -1,0 +1,2 @@
+deploy-scheduler_enable_calls: true
+deploy-scheduler_quartz_acquire_triggers_within_lock: true

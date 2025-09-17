@@ -1,0 +1,4 @@
+- type: replace
+  path: /product-properties/.properties.system_logging.enabled.syslog_rule?
+  value:
+    value: ((system_logging_enabled_syslog_rule))

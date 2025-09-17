@@ -1,0 +1,4 @@
+database_source_service_broker_name: ""
+database_source_service_broker_plan_name: ""
+network_name: ""
+singleton_availability_zone: ""

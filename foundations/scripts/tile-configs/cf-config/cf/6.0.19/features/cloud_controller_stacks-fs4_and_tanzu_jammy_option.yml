@@ -1,0 +1,7 @@
+- type: replace
+  path: /product-properties/.properties.cloud_controller_stacks?
+  value:
+    value: fs4_and_tanzu_jammy
+    selected_option: fs4_and_tanzu_jammy_option
+- type: remove
+  path: /product-properties/.properties.cloud_controller_stacks.fs4_only_option.cloud_controller_default_stack?

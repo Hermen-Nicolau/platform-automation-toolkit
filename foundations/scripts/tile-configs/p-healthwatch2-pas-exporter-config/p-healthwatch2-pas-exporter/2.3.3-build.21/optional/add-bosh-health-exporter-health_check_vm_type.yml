@@ -1,0 +1,4 @@
+- type: replace
+  path: /product-properties/.bosh-health-exporter.health_check_vm_type?
+  value:
+    value: ((bosh-health-exporter_health_check_vm_type))

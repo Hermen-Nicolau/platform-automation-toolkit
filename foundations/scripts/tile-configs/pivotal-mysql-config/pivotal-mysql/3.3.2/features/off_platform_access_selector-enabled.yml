@@ -1,0 +1,13 @@
+- type: replace
+  path: /product-properties/.properties.off_platform_access_selector?
+  value:
+    value: enabled
+    selected_option: enabled
+- type: replace
+  path: /product-properties/.properties.off_platform_access_selector.enabled.tcp_domain?
+  value:
+    value: ((off_platform_access_selector_enabled_tcp_domain))
+- type: replace
+  path: /product-properties/.properties.off_platform_access_selector.enabled.tcp_port_range?
+  value:
+    value: ((off_platform_access_selector_enabled_tcp_port_range))

@@ -1,0 +1,4 @@
+- type: replace
+  path: /product-properties/.properties.router_only_trust_client_ca_certs.enable.client_ca_certs?
+  value:
+    value: ((router_only_trust_client_ca_certs_enable_client_ca_certs))

@@ -1,0 +1,4 @@
+- type: replace
+  path: /product-properties/.properties.plan13_selector.multi_dc_leader_follower.custom_vm_extensions?
+  value:
+    value: ((plan13_selector_multi_dc_leader_follower_custom_vm_extensions))

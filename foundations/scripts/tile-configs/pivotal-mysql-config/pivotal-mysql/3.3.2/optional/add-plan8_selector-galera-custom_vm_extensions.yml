@@ -1,0 +1,4 @@
+- type: replace
+  path: /product-properties/.properties.plan8_selector.galera.custom_vm_extensions?
+  value:
+    value: ((plan8_selector_galera_custom_vm_extensions))

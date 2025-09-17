@@ -1,0 +1,4 @@
+- type: replace
+  path: /product-properties/.grafana.static_ips?
+  value:
+    value: ((grafana_static_ips))

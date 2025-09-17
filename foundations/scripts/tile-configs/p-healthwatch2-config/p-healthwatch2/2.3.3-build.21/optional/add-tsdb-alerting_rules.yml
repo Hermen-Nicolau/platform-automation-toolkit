@@ -1,0 +1,4 @@
+- type: replace
+  path: /product-properties/.tsdb.alerting_rules?
+  value:
+    value: ((tsdb_alerting_rules))

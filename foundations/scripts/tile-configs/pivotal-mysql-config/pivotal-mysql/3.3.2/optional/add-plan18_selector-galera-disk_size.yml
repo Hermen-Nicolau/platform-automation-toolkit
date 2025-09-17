@@ -1,0 +1,4 @@
+- type: replace
+  path: /product-properties/.properties.plan18_selector.galera.disk_size?
+  value:
+    value: ((plan18_selector_galera_disk_size))

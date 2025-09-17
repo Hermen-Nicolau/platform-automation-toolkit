@@ -1,0 +1,36 @@
+product-name: p-antivirus-mirror
+network-properties:
+  network:
+    name: ((network_name))
+  other_availability_zones:
+  - name: ((singleton_availability_zone))
+  singleton_availability_zone:
+    name: ((singleton_availability_zone))
+product-properties:
+  .properties.log_destination:
+    value: ((log_destination))
+  .properties.mirror_port:
+    value: ((mirror_port))
+  .properties.upstream_mirror:
+    value: no_upstream_mirror
+  .properties.use_proxy:
+    value: disabled
+resource-config:
+  antivirus-mirror:
+    instance_type:
+      id: ((resource-var-antivirus-mirror_instance_type))
+    instances: ((resource-var-antivirus-mirror_instances))
+    persistent_disk:
+      size_mb: ((resource-var-antivirus-mirror_persistent_disk_size))
+    max_in_flight: ((resource-var-antivirus-mirror_max_in_flight))
+syslog-properties:
+  enabled: ((syslog_enabled))
+  address: ((syslog_address))
+  port: ((syslog_port))
+  transport_protocol: ((syslog_transport_protocol))
+  tls_enabled: ((syslog_tls_enabled))
+  permitted_peer: ((syslog_permitted_peer))
+  ssl_ca_certificate: ((syslog_ssl_ca_certificate))
+  queue_size: ((syslog_queue_size))
+  forward_debug_logs: ((syslog_forward_debug_logs))
+  custom_rsyslog_configuration: ((syslog_custom_rsyslog_configuration))

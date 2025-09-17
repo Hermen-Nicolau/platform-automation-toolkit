@@ -1,0 +1,3 @@
+- type: replace
+  path: /resource-config?/log-store-vms?/nsx_security_groups?
+  value: ((resource-var-log-store-vms_nsx_security_groups))

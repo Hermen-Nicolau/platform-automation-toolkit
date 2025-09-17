@@ -1,0 +1,13 @@
+- type: replace
+  path: /product-properties/.properties.smoke_tests_isolation?
+  value:
+    value: specified
+    selected_option: specified
+- type: replace
+  path: /product-properties/.properties.smoke_tests_isolation.specified.org_name?
+  value:
+    value: ((smoke_tests_isolation_specified_org_name))
+- type: replace
+  path: /product-properties/.properties.smoke_tests_isolation.specified.space_name?
+  value:
+    value: ((smoke_tests_isolation_specified_space_name))

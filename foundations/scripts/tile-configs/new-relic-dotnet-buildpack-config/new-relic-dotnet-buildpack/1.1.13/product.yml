@@ -1,0 +1,43 @@
+product-name: new-relic-dotnet-buildpack
+network-properties:
+  network:
+    name: ((network_name))
+  other_availability_zones:
+  - name: ((singleton_availability_zone))
+  singleton_availability_zone:
+    name: ((singleton_availability_zone))
+product-properties:
+  .properties.install_nr_dotnetcore_extension_jammy:
+    value: ((install_nr_dotnetcore_extension_jammy))
+  .properties.install_nr_dotnetcore_extension_jammy_cached:
+    value: ((install_nr_dotnetcore_extension_jammy_cached))
+  .properties.install_nr_hwc_extension_windows:
+    value: ((install_nr_hwc_extension_windows))
+  .properties.install_nr_hwc_extension_windows_cached:
+    value: ((install_nr_hwc_extension_windows_cached))
+  .properties.nr_dotnetcore_extension_jammy_cflinuxfs3_buildpack_order:
+    value: ((nr_dotnetcore_extension_jammy_cflinuxfs3_buildpack_order))
+  .properties.nr_dotnetcore_extension_jammy_cflinuxfs3_cached_buildpack_order:
+    value: ((nr_dotnetcore_extension_jammy_cflinuxfs3_cached_buildpack_order))
+  .properties.nr_dotnetcore_extension_jammy_cflinuxfs4_buildpack_order:
+    value: ((nr_dotnetcore_extension_jammy_cflinuxfs4_buildpack_order))
+  .properties.nr_dotnetcore_extension_jammy_cflinuxfs4_cached_buildpack_order:
+    value: ((nr_dotnetcore_extension_jammy_cflinuxfs4_cached_buildpack_order))
+  .properties.nr_hwc_extension_windows_buildpack_order:
+    value: ((nr_hwc_extension_windows_buildpack_order))
+  .properties.nr_hwc_extension_windows_cached_buildpack_order:
+    value: ((nr_hwc_extension_windows_cached_buildpack_order))
+resource-config:
+  delete-all:
+    instance_type:
+      id: ((resource-var-delete-all_instance_type))
+    max_in_flight: ((resource-var-delete-all_max_in_flight))
+  deploy-all:
+    instance_type:
+      id: ((resource-var-deploy-all_instance_type))
+    max_in_flight: ((resource-var-deploy-all_max_in_flight))
+errand-config:
+  delete-all:
+    pre-delete-state: ((delete-all_pre_delete_state))
+  deploy-all:
+    post-deploy-state: ((deploy-all_post_deploy_state))

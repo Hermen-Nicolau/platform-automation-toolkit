@@ -1,0 +1,6 @@
+- type: replace
+  path: /product-properties/.tsdb.time_intervals_config?
+  value:
+    value:
+    - time_interval_config: ((tsdb_time_intervals_config_0_time_interval_config))
+      time_interval_name: ((tsdb_time_intervals_config_0_time_interval_name))

@@ -1,0 +1,4 @@
+- type: replace
+  path: /product-properties/.router.w3c_tenant_id?
+  value:
+    value: ((router_w3c_tenant_id))

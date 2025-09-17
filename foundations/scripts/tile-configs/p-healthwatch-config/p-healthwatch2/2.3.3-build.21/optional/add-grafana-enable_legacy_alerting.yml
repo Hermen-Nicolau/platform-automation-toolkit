@@ -1,0 +1,4 @@
+- type: replace
+  path: /product-properties/.grafana.enable_legacy_alerting?
+  value:
+    value: ((grafana_enable_legacy_alerting))

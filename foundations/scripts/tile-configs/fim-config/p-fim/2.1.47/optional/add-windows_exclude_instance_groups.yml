@@ -1,0 +1,4 @@
+- type: replace
+  path: /product-properties/.properties.windows_exclude_instance_groups?
+  value:
+    value: ((windows_exclude_instance_groups))

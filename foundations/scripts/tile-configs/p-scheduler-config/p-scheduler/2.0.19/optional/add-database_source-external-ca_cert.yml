@@ -1,0 +1,4 @@
+- type: replace
+  path: /product-properties/.properties.database_source.external.ca_cert?
+  value:
+    value: ((database_source_external_ca_cert))

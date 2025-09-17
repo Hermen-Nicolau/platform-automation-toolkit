@@ -1,0 +1,12 @@
+resource-var-create-uaa-client_instance_type: automatic
+resource-var-create-uaa-client_max_in_flight: default
+resource-var-deploy-scheduler_instance_type: automatic
+resource-var-deploy-scheduler_max_in_flight: default
+resource-var-destroy-scheduler_instance_type: automatic
+resource-var-destroy-scheduler_max_in_flight: default
+resource-var-publicize-scheduler_instance_type: automatic
+resource-var-publicize-scheduler_max_in_flight: default
+resource-var-register-broker_instance_type: automatic
+resource-var-register-broker_max_in_flight: default
+resource-var-test-scheduler_instance_type: automatic
+resource-var-test-scheduler_max_in_flight: default

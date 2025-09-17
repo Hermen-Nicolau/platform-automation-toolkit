@@ -1,0 +1,4 @@
+- type: replace
+  path: /product-properties/.pas-sli-exporter.static_ips?
+  value:
+    value: ((pas-sli-exporter_static_ips))

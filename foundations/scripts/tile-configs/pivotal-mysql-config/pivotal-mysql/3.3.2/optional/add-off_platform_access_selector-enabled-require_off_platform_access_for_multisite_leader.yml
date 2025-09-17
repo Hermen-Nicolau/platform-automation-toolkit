@@ -1,0 +1,4 @@
+- type: replace
+  path: /product-properties/.properties.off_platform_access_selector.enabled.require_off_platform_access_for_multisite_leader?
+  value:
+    value: ((off_platform_access_selector_enabled_require_off_platform_access_for_multisite_leader))

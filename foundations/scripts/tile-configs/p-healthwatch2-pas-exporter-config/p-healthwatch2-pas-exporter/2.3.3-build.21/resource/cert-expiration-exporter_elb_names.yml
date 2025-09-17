@@ -1,0 +1,3 @@
+- type: replace
+  path: /resource-config?/cert-expiration-exporter?/elb_names?
+  value: ((resource-var-cert-expiration-exporter_elb_names))

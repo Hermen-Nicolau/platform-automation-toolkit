@@ -1,0 +1,9 @@
+- type: replace
+  path: /product-properties/.properties.dashboard_discovery_tas?
+  value:
+    value: enabled
+    selected_option: enabled
+- type: replace
+  path: /product-properties/.properties.dashboard_discovery_tas.enabled.tas_version?
+  value:
+    value: ((dashboard_discovery_tas_enabled_tas_version))

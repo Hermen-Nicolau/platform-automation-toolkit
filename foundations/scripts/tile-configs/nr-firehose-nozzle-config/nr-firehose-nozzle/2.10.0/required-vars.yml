@@ -1,0 +1,4 @@
+network_name: ""
+nrf_newrelic_account_id: ""
+nrf_newrelic_insert_key: ""
+singleton_availability_zone: ""

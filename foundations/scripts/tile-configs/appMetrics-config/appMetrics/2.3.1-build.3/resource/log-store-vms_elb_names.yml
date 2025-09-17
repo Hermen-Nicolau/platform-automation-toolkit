@@ -1,0 +1,3 @@
+- type: replace
+  path: /resource-config?/log-store-vms?/elb_names?
+  value: ((resource-var-log-store-vms_elb_names))

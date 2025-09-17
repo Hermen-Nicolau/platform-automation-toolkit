@@ -1,0 +1,21 @@
+- type: replace
+  path: /product-properties/.properties.pks_cluster_discovery?
+  value:
+    value: enabled
+    selected_option: enabled
+- type: replace
+  path: /product-properties/.properties.pks_cluster_discovery.enabled.discovery_frequency_seconds?
+  value:
+    value: ((pks_cluster_discovery_enabled_discovery_frequency_seconds))
+- type: replace
+  path: /product-properties/.properties.pks_cluster_discovery.enabled.pks_skip_ssl_verification?
+  value:
+    value: ((pks_cluster_discovery_enabled_pks_skip_ssl_verification))
+- type: replace
+  path: /product-properties/.properties.pks_cluster_discovery.enabled.enabled?
+  value:
+    value: ((pks_cluster_discovery_enabled_enabled))
+- type: replace
+  path: /product-properties/.properties.pks_cluster_discovery.enabled.disabled?
+  value:
+    value: ((pks_cluster_discovery_enabled_disabled))

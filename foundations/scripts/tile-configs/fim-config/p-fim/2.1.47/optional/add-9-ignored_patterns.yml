@@ -1,0 +1,13 @@
+- type: replace
+  path: /product-properties/.properties.ignored_patterns?
+  value:
+    value:
+    - regex: ((ignored_patterns_0_regex))
+    - regex: ((ignored_patterns_1_regex))
+    - regex: ((ignored_patterns_2_regex))
+    - regex: ((ignored_patterns_3_regex))
+    - regex: ((ignored_patterns_4_regex))
+    - regex: ((ignored_patterns_5_regex))
+    - regex: ((ignored_patterns_6_regex))
+    - regex: ((ignored_patterns_7_regex))
+    - regex: ((ignored_patterns_8_regex))

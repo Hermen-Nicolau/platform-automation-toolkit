@@ -1,0 +1,4 @@
+- type: replace
+  path: /product-properties/.properties.pks_cluster_discovery.enabled.pks_ca?
+  value:
+    value: ((pks_cluster_discovery_enabled_pks_ca))

@@ -1,0 +1,25 @@
+- type: replace
+  path: /product-properties/.properties.system_logging?
+  value:
+    value: enabled
+    selected_option: enabled
+- type: replace
+  path: /product-properties/.properties.system_logging.enabled.host?
+  value:
+    value: ((system_logging_enabled_host))
+- type: replace
+  path: /product-properties/.properties.system_logging.enabled.port?
+  value:
+    value: ((system_logging_enabled_port))
+- type: replace
+  path: /product-properties/.properties.system_logging.enabled.protocol?
+  value:
+    value: ((system_logging_enabled_protocol))
+- type: replace
+  path: /product-properties/.properties.system_logging.enabled.use_tcp_for_file_forwarding_local_transport?
+  value:
+    value: ((system_logging_enabled_use_tcp_for_file_forwarding_local_transport))
+- type: replace
+  path: /product-properties/.properties.system_logging.enabled.syslog_drop_debug?
+  value:
+    value: ((system_logging_enabled_syslog_drop_debug))

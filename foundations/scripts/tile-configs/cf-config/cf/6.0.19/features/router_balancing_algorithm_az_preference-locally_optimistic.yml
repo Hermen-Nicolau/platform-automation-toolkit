@@ -1,0 +1,5 @@
+- type: replace
+  path: /product-properties/.properties.router_balancing_algorithm_az_preference?
+  value:
+    value: locally-optimistic
+    selected_option: locally_optimistic

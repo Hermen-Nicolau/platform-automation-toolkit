@@ -1,0 +1,4 @@
+- type: replace
+  path: /product-properties/.mysql_monitor.recipient_email?
+  value:
+    value: ((mysql_monitor_recipient_email))

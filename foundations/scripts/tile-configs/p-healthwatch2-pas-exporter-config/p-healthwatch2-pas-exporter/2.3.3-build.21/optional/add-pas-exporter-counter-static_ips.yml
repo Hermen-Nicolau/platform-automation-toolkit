@@ -1,0 +1,4 @@
+- type: replace
+  path: /product-properties/.pas-exporter-counter.static_ips?
+  value:
+    value: ((pas-exporter-counter_static_ips))

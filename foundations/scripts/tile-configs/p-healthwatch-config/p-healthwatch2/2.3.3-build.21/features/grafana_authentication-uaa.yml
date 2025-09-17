@@ -1,0 +1,5 @@
+- type: replace
+  path: /product-properties/.properties.grafana_authentication?
+  value:
+    value: uaa
+    selected_option: uaa

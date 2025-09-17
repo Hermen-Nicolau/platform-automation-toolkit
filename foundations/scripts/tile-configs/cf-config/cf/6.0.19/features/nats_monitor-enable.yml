@@ -1,0 +1,17 @@
+- type: replace
+  path: /product-properties/.properties.nats_monitor?
+  value:
+    value: enable
+    selected_option: enable
+- type: replace
+  path: /product-properties/.properties.nats_monitor.enable.fix_split_brain?
+  value:
+    value: ((nats_monitor_enable_fix_split_brain))
+- type: replace
+  path: /product-properties/.properties.nats_monitor.enable.test_frequency?
+  value:
+    value: ((nats_monitor_enable_test_frequency))
+- type: replace
+  path: /product-properties/.properties.nats_monitor.enable.log_level?
+  value:
+    value: ((nats_monitor_enable_log_level))

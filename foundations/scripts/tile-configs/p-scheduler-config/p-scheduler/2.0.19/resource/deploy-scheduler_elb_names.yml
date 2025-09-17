@@ -1,0 +1,3 @@
+- type: replace
+  path: /resource-config?/deploy-scheduler?/elb_names?
+  value: ((resource-var-deploy-scheduler_elb_names))

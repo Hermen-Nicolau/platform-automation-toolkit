@@ -1,0 +1,4 @@
+- type: replace
+  path: /product-properties/.properties.isolation_segment_domain?
+  value:
+    value: ((isolation_segment_domain))

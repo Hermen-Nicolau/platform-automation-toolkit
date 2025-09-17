@@ -1,0 +1,4 @@
+- type: replace
+  path: /product-properties/.tsdb.static_ips?
+  value:
+    value: ((tsdb_static_ips))

@@ -1,0 +1,3 @@
+- type: replace
+  path: /resource-config?/grafana?/elb_names?
+  value: ((resource-var-grafana_elb_names))

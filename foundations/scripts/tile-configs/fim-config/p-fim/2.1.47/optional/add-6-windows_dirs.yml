@@ -1,0 +1,10 @@
+- type: replace
+  path: /product-properties/.properties.windows_dirs?
+  value:
+    value:
+    - path: ((windows_dirs_0_path))
+    - path: ((windows_dirs_1_path))
+    - path: ((windows_dirs_2_path))
+    - path: ((windows_dirs_3_path))
+    - path: ((windows_dirs_4_path))
+    - path: ((windows_dirs_5_path))

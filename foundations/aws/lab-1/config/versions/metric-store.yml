@@ -1,0 +1,8 @@
+---
+pivnet-api-token: ((pivnet_token))
+pivnet-product-slug: p-metric-store
+product-version: ((metric-store-version))
+file-glob: "*.pivotal"
+stemcell-iaas: aws
+stemcell-version: ((jammy-stemcell-version))   # specific stemcell version to download
+stemcell-heavy: true    

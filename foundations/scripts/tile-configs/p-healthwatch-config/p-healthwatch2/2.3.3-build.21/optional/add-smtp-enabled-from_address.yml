@@ -1,0 +1,4 @@
+- type: replace
+  path: /product-properties/.properties.smtp.enabled.from_address?
+  value:
+    value: ((smtp_enabled_from_address))

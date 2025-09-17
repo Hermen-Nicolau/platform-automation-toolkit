@@ -1,0 +1,9 @@
+- type: replace
+  path: /product-properties/.properties.compute_isolation?
+  value:
+    value: enabled
+    selected_option: enabled
+- type: replace
+  path: /product-properties/.properties.compute_isolation.enabled.isolation_segment_name?
+  value:
+    value: ((compute_isolation_enabled_isolation_segment_name))

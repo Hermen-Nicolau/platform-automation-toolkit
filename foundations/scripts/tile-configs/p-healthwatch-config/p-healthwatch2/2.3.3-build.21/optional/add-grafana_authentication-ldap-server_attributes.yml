@@ -1,0 +1,4 @@
+- type: replace
+  path: /product-properties/.properties.grafana_authentication.ldap.server_attributes?
+  value:
+    value: ((grafana_authentication_ldap_server_attributes))

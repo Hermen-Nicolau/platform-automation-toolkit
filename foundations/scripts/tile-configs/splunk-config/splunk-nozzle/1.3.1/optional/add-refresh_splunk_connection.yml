@@ -1,0 +1,4 @@
+- type: replace
+  path: /product-properties/.properties.refresh_splunk_connection?
+  value:
+    value: ((refresh_splunk_connection))

@@ -1,0 +1,8 @@
+newrelic_broker_enable_global_access_to_plans: true
+nrplans_0_oldPlan: false
+delete-all_pre_delete_state: default
+deploy-all_post_deploy_state: default
+resource-var-delete-all_instance_type: automatic
+resource-var-delete-all_max_in_flight: default
+resource-var-deploy-all_instance_type: automatic
+resource-var-deploy-all_max_in_flight: default

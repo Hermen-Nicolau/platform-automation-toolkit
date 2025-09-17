@@ -10,13 +10,6 @@
 # product=$2
 
 read -p "Enter IaaS (e.g., aws, azure, gcp) in lower case: " iaas
-read -p "Enter product name (e.g., cf, pas-windows) in lower case : " product
-
-if [[ -z "$iaas" || -z "$product" ]]; then
-  echo "Both IaaS and product name are required."
-  exit 1
-fi
-echo "The Iaas selected is $iaas and the Product selected is $product"
 
 # ---- Get initial foundation from user input
 read -p "Enter initial foundation name (e.g., dev, prod): " INITIAL_FOUNDATION
@@ -26,72 +19,29 @@ if [[ -z "$INITIAL_FOUNDATION" ]]; then
   exit 1
 fi
 
-# ---- Get version, glob, slug from version file
-echo "Generating configuration for new product $product"
-versionfile="../${iaas}/${INITIAL_FOUNDATION}/config/versions/$product-version.yml"
-if [ ! -f ${versionfile} ]; then
-  echo "Must create ${versionfile}"
+read -p "Enter product name (e.g., cf, pas-windows) in lower case : " product
+
+if [[ -z "$iaas" || -z "$product" ]]; then
+  echo "Both IaaS and product name are required."
   exit 1
 fi
-new_version=$(bosh interpolate ${versionfile} --path=/new-product-version)
-glob=$(bosh interpolate ${versionfile} --path=/pivnet-file-glob)
-slug=$(bosh interpolate ${versionfile} --path=/pivnet-product-slug)
-
-# ---- Accept the Pivnet EULA
-echo "Accepting the Pivnet EULA"
-pivnet login --api-token=$PIVNET_TOKEN
-pivnet accept-eula -p ${slug} -r ${new_version}
-
-
-
-# ---- Execute om config-template 
-tmpdir=tile-configs/${product}-config
-mkdir -p ${tmpdir}
-
-om config-template --output-directory=${tmpdir} --pivnet-api-token ${PIVNET_TOKEN} --pivnet-product-slug  ${slug} --product-version ${new_version} --pivnet-file-glob ${glob}
-
-if [[ ${product} == "vmware-nsx-t" ]]; then
-  if [[ ${new_version} == "3.2.2.2" ]]; then
-    new_version="3.2.1707xxx"
-  elif [[ ${version} == "3.2.2" ]]; then
-    new_version="3.2.16xxx"
-  fi
-fi
-
-lts_substring="+LTS-T"
-if [[ ${product} == "cf" || ${product} == "pas-windows" ]]; then
-  # don't really need the if check
-  # this takes the ${version} and remove the template which is defined as anything ending in "+LTS-T"
-  # if the result is empty (-z), then the ${version} did in fact end with that suffix
-  # if [[ -z ${version##*$lts_substring} ]]; then
-    # Remove the suffix defined in ${lts_substring} from ${version}
-    new_version=${new_version%$lts_substring*}
-  # fi
-fi
-
-wrkdir=$(find ${tmpdir}/${product} -name "${new_version}*")
-if [ ! -f ${wrkdir}/product.yml ]; then
-  echo "Something wrong with configuration as expecting ${wrkdir}/product.yml to exist"
-  exit 1
-fi
-
-echo move the new product.yml to folder
-
-cp ${wrkdir}/product.yml ./compare-configs-outputs/new-${product}-${new_version}.yml 
-
+echo "The Iaas selected is $iaas and the Product selected is $product"
 
 
 
 # ---- Get version, glob, slug from version file
-echo "Generating configuration for current product $product"
-versionfile="../${iaas}/${INITIAL_FOUNDATION}/config/versions/$product-version.yml"
+echo "Generating configuration for new product $product"
+productfile="../${iaas}/${INITIAL_FOUNDATION}/config/versions/$product.yml"
+versionfile="../${iaas}/${INITIAL_FOUNDATION}/config/versions/version.yml"
+
 if [ ! -f ${versionfile} ]; then
   echo "Must create ${versionfile}"
   exit 1
 fi
-version=$(bosh interpolate ${versionfile} --path=/current-product-version)
-glob=$(bosh interpolate ${versionfile} --path=/pivnet-file-glob)
-slug=$(bosh interpolate ${versionfile} --path=/pivnet-product-slug)
+
+version=$(bosh interpolate ${versionfile} --path=/$product-version)
+glob=$(bosh interpolate ${productfile} --path=/file-glob)
+slug=$(bosh interpolate ${productfile} --path=/pivnet-product-slug)
 
 # ---- Accept the Pivnet EULA
 echo "Accepting the Pivnet EULA"
@@ -115,7 +65,7 @@ if [[ ${product} == "vmware-nsx-t" ]]; then
 fi
 
 lts_substring="+LTS-T"
-if [[ ${product} == "cf" || ${product} == "pas-windows" ]]; then
+if [[ ${product} == "cf" || ${product} == "pas-windows" || ${product} == "p-isolation-segment" ]]; then
   # don't really need the if check
   # this takes the ${version} and remove the template which is defined as anything ending in "+LTS-T"
   # if the result is empty (-z), then the ${version} did in fact end with that suffix
@@ -131,36 +81,24 @@ if [ ! -f ${wrkdir}/product.yml ]; then
   exit 1
 fi
 
-echo move the new old product.yml to folder
-
-cp ${wrkdir}/product.yml ./compare-configs-outputs/current-${product}-${version}.yml 
-
-# ---- Compare the two files 
-echo "Comparing the current vs new file config "
-diff -u ./compare-configs-outputs/current-${product}-${version}.yml ./compare-configs-outputs/new-${product}-${new_version}.yml > ./compare-configs-outputs/diff-cf-${version}-vs-${new_version}.yml
-
-
-echo ""
-echo ""
-echo ""
-cat ./compare-configs-outputs/diff-cf-${version}-vs-${new_version}.yml
-
-
 
 # ---- Create array of opsfiles to apply
-mkdir -p ../${iaas}/opsfiles
-ops_files="../${iaas}/opsfiles/${product}-operations"
-touch ${ops_files}
+# mkdir -p ../${iaas}/opsfiles
+# ops_files="../${iaas}/opsfiles/${product}-operations"
+# touch ${ops_files}
 
-ops_files_args=("")
-while IFS= read -r var
-do
-  ops_files_args+=("-o ${wrkdir}/${var}")
-done < "$ops_files"
+# ops_files_args=("")
+# while IFS= read -r var
+# do
+#   ops_files_args+=("-o ${wrkdir}/${var}")
+# done < "$ops_files"
 
-# ---- Create template file from product.yml with applied opsfiles
-mkdir -p ../${iaas}/${INITIAL_FOUNDATION}/config/templates
-bosh int ${wrkdir}/product.yml ${ops_files_args[@]} > ../${iaas}/${INITIAL_FOUNDATION}/config/templates/${product}.yml
+
+
+# ---- Move template file product.yml to template folder inside the foundation 
+cp ${wrkdir}/product.yml ../${iaas}/${INITIAL_FOUNDATION}/config/templates/${product}.yml
+
+#bosh int ${wrkdir}/product.yml ${ops_files_args[@]} > ../${iaas}/${INITIAL_FOUNDATION}/config/templates/${product}.yml
 
 # ---- Set up for creation of defaults file
 mkdir -p ../${iaas}/${INITIAL_FOUNDATION}/config/defaults
@@ -202,6 +140,9 @@ touch ../${iaas}/${INITIAL_FOUNDATION}/config/vars/${product}.yml
 # ---- Ensure common vars file exists
 mkdir -p ../${iaas}/common
 touch ../${iaas}/common/${product}.yml
+
+
+
 
 # ---- Fix the defaults file
 # There are some default values that are from properties that may be removed

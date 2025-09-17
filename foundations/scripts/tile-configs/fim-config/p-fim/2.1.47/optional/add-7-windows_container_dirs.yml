@@ -1,0 +1,11 @@
+- type: replace
+  path: /product-properties/.properties.windows_container_dirs?
+  value:
+    value:
+    - path: ((windows_container_dirs_0_path))
+    - path: ((windows_container_dirs_1_path))
+    - path: ((windows_container_dirs_2_path))
+    - path: ((windows_container_dirs_3_path))
+    - path: ((windows_container_dirs_4_path))
+    - path: ((windows_container_dirs_5_path))
+    - path: ((windows_container_dirs_6_path))

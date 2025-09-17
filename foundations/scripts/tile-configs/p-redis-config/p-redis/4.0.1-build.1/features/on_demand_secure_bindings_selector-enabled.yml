@@ -1,0 +1,5 @@
+- type: replace
+  path: /product-properties/.properties.on_demand_secure_bindings_selector?
+  value:
+    value: "Yes"
+    selected_option: enabled

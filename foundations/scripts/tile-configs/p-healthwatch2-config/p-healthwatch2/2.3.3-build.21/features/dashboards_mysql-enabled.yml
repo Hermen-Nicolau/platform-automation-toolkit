@@ -1,0 +1,5 @@
+- type: replace
+  path: /product-properties/.properties.dashboards_mysql?
+  value:
+    value: enabled
+    selected_option: enabled

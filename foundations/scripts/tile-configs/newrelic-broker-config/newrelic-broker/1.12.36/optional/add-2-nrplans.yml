@@ -1,0 +1,20 @@
+- type: replace
+  path: /product-properties/.properties.nrplans?
+  value:
+    value:
+    - insightsInsertKey: ((nrplans_0_insightsInsertKey))
+      licenseKey: ((nrplans_0_licenseKey))
+      oldPlan: ((nrplans_0_oldPlan))
+      orgs: ((nrplans_0_orgs))
+      planDescription: ((nrplans_0_planDescription))
+      planName: ((nrplans_0_planName))
+      planOldGuid: ((nrplans_0_planOldGuid))
+      rpmAccountId: ((nrplans_0_rpmAccountId))
+    - insightsInsertKey: ((nrplans_1_insightsInsertKey))
+      licenseKey: ((nrplans_1_licenseKey))
+      oldPlan: ((nrplans_1_oldPlan))
+      orgs: ((nrplans_1_orgs))
+      planDescription: ((nrplans_1_planDescription))
+      planName: ((nrplans_1_planName))
+      planOldGuid: ((nrplans_1_planOldGuid))
+      rpmAccountId: ((nrplans_1_rpmAccountId))

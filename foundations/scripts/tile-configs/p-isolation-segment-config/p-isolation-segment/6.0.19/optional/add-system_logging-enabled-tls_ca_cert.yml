@@ -1,0 +1,4 @@
+- type: replace
+  path: /product-properties/.properties.system_logging.enabled.tls_ca_cert?
+  value:
+    value: ((system_logging_enabled_tls_ca_cert))

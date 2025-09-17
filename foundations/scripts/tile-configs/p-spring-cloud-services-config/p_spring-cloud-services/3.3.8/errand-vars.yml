@@ -1,0 +1,3 @@
+destroy-brokers_pre_delete_state: default
+register-brokers_post_deploy_state: default
+upgrade-all-instances_post_deploy_state: default

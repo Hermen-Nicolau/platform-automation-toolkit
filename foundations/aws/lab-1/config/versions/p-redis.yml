@@ -1,0 +1,8 @@
+---
+pivnet-api-token: ((pivnet_token))
+pivnet-product-slug: p-redis
+file-glob: "*.pivotal"
+product-version: ((redis-version))
+stemcell-iaas: "aws"
+stemcell-version: ((jammy-stemcell-version))   # specific stemcell version to download
+stemcell-heavy: true    

@@ -1,0 +1,3 @@
+- type: replace
+  path: /resource-config?/destroy-broker?/nsx_security_groups?
+  value: ((resource-var-destroy-broker_nsx_security_groups))

@@ -1,0 +1,4 @@
+- type: replace
+  path: /product-properties/.properties.grafana_authentication.generic_oauth.allowed_organizations?
+  value:
+    value: ((grafana_authentication_generic_oauth_allowed_organizations))

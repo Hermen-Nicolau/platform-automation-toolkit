@@ -1,0 +1,7 @@
+resource-var-db-and-errand-runner_instance_type: automatic
+resource-var-db-and-errand-runner_max_in_flight: default
+resource-var-db-and-errand-runner_persistent_disk_size: automatic
+resource-var-log-store-vms_instance_type: automatic
+resource-var-log-store-vms_instances: automatic
+resource-var-log-store-vms_max_in_flight: default
+resource-var-log-store-vms_persistent_disk_size: automatic

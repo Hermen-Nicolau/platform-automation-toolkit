@@ -1,0 +1,10 @@
+---
+pivnet-api-token: ((pivnet_token))
+pivnet-product-slug: p-isolation-segment
+# file-glob: "srt*.pivotal"
+file-glob: "p-isolation-segment*.pivotal"
+product-version: ((cf-version))
+#product-version-regex: ^4\.0\..*$
+stemcell-iaas: aws
+stemcell-version: ((jammy-stemcell-version))   # specific stemcell version to download
+stemcell-heavy: true

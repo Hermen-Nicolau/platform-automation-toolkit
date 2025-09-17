@@ -1,0 +1,4 @@
+- type: replace
+  path: /product-properties/.properties.backups_selector.gcs.path?
+  value:
+    value: ((backups_selector_gcs_path))

@@ -1,0 +1,35 @@
+product-name: newrelic-broker
+network-properties:
+  network:
+    name: ((network_name))
+  other_availability_zones:
+  - name: ((singleton_availability_zone))
+  singleton_availability_zone:
+    name: ((singleton_availability_zone))
+product-properties:
+  .properties.newrelic_broker_enable_global_access_to_plans:
+    value: ((newrelic_broker_enable_global_access_to_plans))
+  .properties.nrplans:
+    value:
+    - insightsInsertKey: ((nrplans_0_insightsInsertKey))
+      licenseKey: ((nrplans_0_licenseKey))
+      oldPlan: ((nrplans_0_oldPlan))
+      orgs: ((nrplans_0_orgs))
+      planDescription: ((nrplans_0_planDescription))
+      planName: ((nrplans_0_planName))
+      planOldGuid: ((nrplans_0_planOldGuid))
+      rpmAccountId: ((nrplans_0_rpmAccountId))
+resource-config:
+  delete-all:
+    instance_type:
+      id: ((resource-var-delete-all_instance_type))
+    max_in_flight: ((resource-var-delete-all_max_in_flight))
+  deploy-all:
+    instance_type:
+      id: ((resource-var-deploy-all_instance_type))
+    max_in_flight: ((resource-var-deploy-all_max_in_flight))
+errand-config:
+  delete-all:
+    pre-delete-state: ((delete-all_pre_delete_state))
+  deploy-all:
+    post-deploy-state: ((deploy-all_post_deploy_state))

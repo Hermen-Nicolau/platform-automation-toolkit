@@ -1,0 +1,3 @@
+- type: replace
+  path: /resource-config?/pas-sli-exporter?/elb_names?
+  value: ((resource-var-pas-sli-exporter_elb_names))

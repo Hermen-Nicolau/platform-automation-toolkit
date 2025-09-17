@@ -1,0 +1,4 @@
+- type: replace
+  path: /product-properties/.properties.global_settings_smoke_tests_apps_domain?
+  value:
+    value: ((global_settings_smoke_tests_apps_domain))

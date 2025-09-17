@@ -1,0 +1,4 @@
+- type: replace
+  path: /product-properties/.properties.grafana_route.manual.ssl_ca_certificate?
+  value:
+    value: ((grafana_route_manual_ssl_ca_certificate))

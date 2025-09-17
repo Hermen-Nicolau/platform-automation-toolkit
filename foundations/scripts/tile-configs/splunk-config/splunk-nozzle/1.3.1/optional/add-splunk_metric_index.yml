@@ -1,0 +1,4 @@
+- type: replace
+  path: /product-properties/.properties.splunk_metric_index?
+  value:
+    value: ((splunk_metric_index))

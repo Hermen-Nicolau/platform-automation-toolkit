@@ -1,0 +1,12 @@
+log_destination: syslog
+mirror_port: 6501
+syslog_address: null
+syslog_custom_rsyslog_configuration: ""
+syslog_enabled: false
+syslog_forward_debug_logs: false
+syslog_permitted_peer: false
+syslog_port: null
+syslog_queue_size: 100000
+syslog_ssl_ca_certificate: null
+syslog_tls_enabled: false
+syslog_transport_protocol: tcp

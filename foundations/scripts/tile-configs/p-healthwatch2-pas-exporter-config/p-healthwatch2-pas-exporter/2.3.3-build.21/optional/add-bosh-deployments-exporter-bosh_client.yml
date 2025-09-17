@@ -1,0 +1,6 @@
+- type: replace
+  path: /product-properties/.bosh-deployments-exporter.bosh_client?
+  value:
+    value:
+      identity: ((bosh-deployments-exporter_bosh_client_identity))
+      password: ((bosh-deployments-exporter_bosh_client_password))

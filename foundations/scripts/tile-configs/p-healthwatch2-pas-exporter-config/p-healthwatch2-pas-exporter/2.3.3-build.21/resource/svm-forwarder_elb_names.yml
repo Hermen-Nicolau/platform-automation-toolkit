@@ -1,0 +1,3 @@
+- type: replace
+  path: /resource-config?/svm-forwarder?/elb_names?
+  value: ((resource-var-svm-forwarder_elb_names))

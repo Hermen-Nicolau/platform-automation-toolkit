@@ -1,0 +1,3 @@
+- type: replace
+  path: /resource-config?/nfs_server?/elb_names?
+  value: ((resource-var-nfs_server_elb_names))

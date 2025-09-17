@@ -1,0 +1,4 @@
+resource-var-metric-store_instance_type: automatic
+resource-var-metric-store_instances: automatic
+resource-var-metric-store_max_in_flight: default
+resource-var-metric-store_persistent_disk_size: automatic

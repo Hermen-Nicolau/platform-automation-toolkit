@@ -1,0 +1,3 @@
+- type: replace
+  path: /resource-config?/destroy-scheduler?/additional_vm_extensions?
+  value: ((resource-var-destroy-scheduler_additional_vm_extensions))

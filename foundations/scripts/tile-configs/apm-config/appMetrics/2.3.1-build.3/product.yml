@@ -1,0 +1,65 @@
+product-name: appMetrics
+network-properties:
+  network:
+    name: ((network_name))
+  other_availability_zones:
+  - name: ((singleton_availability_zone))
+  singleton_availability_zone:
+    name: ((singleton_availability_zone))
+product-properties:
+  .properties.enable_logs:
+    value: ((enable_logs))
+  .properties.log_store_enable_envelope_selector:
+    value: ((log_store_enable_envelope_selector))
+  .properties.log_store_enable_event_alerting:
+    value: ((log_store_enable_event_alerting))
+  .properties.log_store_enable_syslog_receiver:
+    value: ((log_store_enable_syslog_receiver))
+  .properties.log_store_partition_count:
+    value: ((log_store_partition_count))
+  .properties.log_store_prune_interval:
+    value: ((log_store_prune_interval))
+  .properties.log_store_prune_threshold:
+    value: ((log_store_prune_threshold))
+  .properties.log_store_replication_factor:
+    value: ((log_store_replication_factor))
+  .properties.log_store_retention_period:
+    value: ((log_store_retention_period))
+  .properties.postgres_ciphers:
+    value: ((postgres_ciphers))
+  .properties.use_socks_proxy:
+    value: ((use_socks_proxy))
+resource-config:
+  db-and-errand-runner:
+    instance_type:
+      id: ((resource-var-db-and-errand-runner_instance_type))
+    persistent_disk:
+      size_mb: ((resource-var-db-and-errand-runner_persistent_disk_size))
+    max_in_flight: ((resource-var-db-and-errand-runner_max_in_flight))
+  log-store-vms:
+    instance_type:
+      id: ((resource-var-log-store-vms_instance_type))
+    instances: ((resource-var-log-store-vms_instances))
+    persistent_disk:
+      size_mb: ((resource-var-log-store-vms_persistent_disk_size))
+    max_in_flight: ((resource-var-log-store-vms_max_in_flight))
+syslog-properties:
+  enabled: ((syslog_enabled))
+  address: ((syslog_address))
+  port: ((syslog_port))
+  transport_protocol: ((syslog_transport_protocol))
+  tls_enabled: ((syslog_tls_enabled))
+  permitted_peer: ((syslog_permitted_peer))
+  ssl_ca_certificate: ((syslog_ssl_ca_certificate))
+  queue_size: ((syslog_queue_size))
+  forward_debug_logs: ((syslog_forward_debug_logs))
+  custom_rsyslog_configuration: ((syslog_custom_rsyslog_configuration))
+errand-config:
+  delete-space:
+    pre-delete-state: ((delete-space_pre_delete_state))
+  migrate-route:
+    post-deploy-state: ((migrate-route_post_deploy_state))
+  push-app-metrics:
+    post-deploy-state: ((push-app-metrics_post_deploy_state))
+  smoke-test:
+    post-deploy-state: ((smoke-test_post_deploy_state))

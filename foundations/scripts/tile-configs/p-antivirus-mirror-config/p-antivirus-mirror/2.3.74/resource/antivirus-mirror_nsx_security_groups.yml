@@ -1,0 +1,3 @@
+- type: replace
+  path: /resource-config?/antivirus-mirror?/nsx_security_groups?
+  value: ((resource-var-antivirus-mirror_nsx_security_groups))

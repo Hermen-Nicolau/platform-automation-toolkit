@@ -1,0 +1,34 @@
+- type: replace
+  path: /product-properties/.tsdb.alerting_pagerduty_receiver_config?
+  value:
+    value:
+    - basic_auth: ((tsdb_alerting_pagerduty_receiver_config_0_basic_auth))
+      bearer_token:
+        secret: ((tsdb_alerting_pagerduty_receiver_config_0_bearer_token))
+      ca: ((tsdb_alerting_pagerduty_receiver_config_0_ca))
+      insecure_skip_verify: ((tsdb_alerting_pagerduty_receiver_config_0_insecure_skip_verify))
+      receiver_config: ((tsdb_alerting_pagerduty_receiver_config_0_receiver_config))
+      receiver_name: ((tsdb_alerting_pagerduty_receiver_config_0_receiver_name))
+      routing_key:
+        secret: ((tsdb_alerting_pagerduty_receiver_config_0_routing_key))
+      server_name: ((tsdb_alerting_pagerduty_receiver_config_0_server_name))
+      service_key:
+        secret: ((tsdb_alerting_pagerduty_receiver_config_0_service_key))
+      tls_certificates:
+        cert_pem: ((tsdb_alerting_pagerduty_receiver_config_0_certificate))
+        private_key_pem: ((tsdb_alerting_pagerduty_receiver_config_0_privatekey))
+    - basic_auth: ((tsdb_alerting_pagerduty_receiver_config_1_basic_auth))
+      bearer_token:
+        secret: ((tsdb_alerting_pagerduty_receiver_config_1_bearer_token))
+      ca: ((tsdb_alerting_pagerduty_receiver_config_1_ca))
+      insecure_skip_verify: ((tsdb_alerting_pagerduty_receiver_config_1_insecure_skip_verify))
+      receiver_config: ((tsdb_alerting_pagerduty_receiver_config_1_receiver_config))
+      receiver_name: ((tsdb_alerting_pagerduty_receiver_config_1_receiver_name))
+      routing_key:
+        secret: ((tsdb_alerting_pagerduty_receiver_config_1_routing_key))
+      server_name: ((tsdb_alerting_pagerduty_receiver_config_1_server_name))
+      service_key:
+        secret: ((tsdb_alerting_pagerduty_receiver_config_1_service_key))
+      tls_certificates:
+        cert_pem: ((tsdb_alerting_pagerduty_receiver_config_1_certificate))
+        private_key_pem: ((tsdb_alerting_pagerduty_receiver_config_1_privatekey))

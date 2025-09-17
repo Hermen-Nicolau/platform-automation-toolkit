@@ -1,0 +1,2 @@
+buildpack: java_buildpack_offline
+issuer_uri: false

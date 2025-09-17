@@ -1,0 +1,4 @@
+- type: replace
+  path: /product-properties/.tsdb.inhibit_rules?
+  value:
+    value: ((tsdb_inhibit_rules))

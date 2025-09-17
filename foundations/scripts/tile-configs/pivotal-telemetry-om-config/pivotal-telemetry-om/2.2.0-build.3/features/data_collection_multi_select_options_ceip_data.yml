@@ -1,0 +1,3 @@
+- type: replace
+  path: /product-properties/.properties.data_collection_multi_select_options?/value/-
+  value: ceip_data

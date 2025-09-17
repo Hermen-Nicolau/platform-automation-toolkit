@@ -1,0 +1,21 @@
+- type: replace
+  path: /product-properties/.properties.backups_selector?
+  value:
+    value: S3 IAM Backups
+    selected_option: s3iam
+- type: replace
+  path: /product-properties/.properties.backups_selector.s3iam.iam_instance_profile?
+  value:
+    value: ((backups_selector_s3iam_iam_instance_profile))
+- type: replace
+  path: /product-properties/.properties.backups_selector.s3iam.bucket_name?
+  value:
+    value: ((backups_selector_s3iam_bucket_name))
+- type: replace
+  path: /product-properties/.properties.backups_selector.s3iam.cron_schedule?
+  value:
+    value: ((backups_selector_s3iam_cron_schedule))
+- type: replace
+  path: /product-properties/.properties.backups_selector.s3iam.force_path_style?
+  value:
+    value: ((backups_selector_s3iam_force_path_style))

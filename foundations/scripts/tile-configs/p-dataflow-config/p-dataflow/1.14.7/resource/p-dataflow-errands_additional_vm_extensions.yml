@@ -1,0 +1,3 @@
+- type: replace
+  path: /resource-config?/p-dataflow-errands?/additional_vm_extensions?
+  value: ((resource-var-p-dataflow-errands_additional_vm_extensions))

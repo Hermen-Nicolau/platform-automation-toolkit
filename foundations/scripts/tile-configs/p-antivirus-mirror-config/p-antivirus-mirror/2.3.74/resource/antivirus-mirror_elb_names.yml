@@ -1,0 +1,3 @@
+- type: replace
+  path: /resource-config?/antivirus-mirror?/elb_names?
+  value: ((resource-var-antivirus-mirror_elb_names))

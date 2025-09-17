@@ -1,0 +1,3 @@
+- type: replace
+  path: /resource-config?/svm-forwarder?/additional_vm_extensions?
+  value: ((resource-var-svm-forwarder_additional_vm_extensions))

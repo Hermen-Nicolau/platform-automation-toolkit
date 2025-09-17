@@ -1,0 +1,5 @@
+- type: replace
+  path: /product-properties/.properties.windows_low_severity_patterns?
+  value:
+    value:
+    - regex: ((windows_low_severity_patterns_0_regex))

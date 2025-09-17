@@ -1,0 +1,4 @@
+- type: replace
+  path: /product-properties/.properties.plan16_selector.single_node.custom_vm_extensions?
+  value:
+    value: ((plan16_selector_single_node_custom_vm_extensions))

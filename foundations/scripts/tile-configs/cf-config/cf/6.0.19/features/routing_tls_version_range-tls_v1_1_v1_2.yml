@@ -1,0 +1,5 @@
+- type: replace
+  path: /product-properties/.properties.routing_tls_version_range?
+  value:
+    value: tls_v1_1_v1_2
+    selected_option: tls_v1_1_v1_2

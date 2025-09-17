@@ -1,0 +1,14 @@
+- type: replace
+  path: /product-properties/.properties.database_source?
+  value:
+    value: external
+    selected_option: external
+- type: remove
+  path: /product-properties/.properties.database_source.service_broker.name?
+- type: remove
+  path: /product-properties/.properties.database_source.service_broker.plan_name?
+- type: replace
+  path: /product-properties/.properties.database_source.external.url?
+  value:
+    value:
+      secret: ((database_source_external_url))

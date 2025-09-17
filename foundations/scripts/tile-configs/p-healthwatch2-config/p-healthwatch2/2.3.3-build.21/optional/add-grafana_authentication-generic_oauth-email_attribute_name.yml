@@ -1,0 +1,4 @@
+- type: replace
+  path: /product-properties/.properties.grafana_authentication.generic_oauth.email_attribute_name?
+  value:
+    value: ((grafana_authentication_generic_oauth_email_attribute_name))

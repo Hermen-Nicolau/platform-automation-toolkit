@@ -1,0 +1,64 @@
+- type: replace
+  path: /product-properties/.tsdb.alerting_email_receiver_config?
+  value:
+    value:
+    - auth_password:
+        secret: ((tsdb_alerting_email_receiver_config_0_auth_password))
+      auth_secret:
+        secret: ((tsdb_alerting_email_receiver_config_0_auth_secret))
+      ca: ((tsdb_alerting_email_receiver_config_0_ca))
+      insecure_skip_verify: ((tsdb_alerting_email_receiver_config_0_insecure_skip_verify))
+      receiver_config: ((tsdb_alerting_email_receiver_config_0_receiver_config))
+      receiver_name: ((tsdb_alerting_email_receiver_config_0_receiver_name))
+      server_name: ((tsdb_alerting_email_receiver_config_0_server_name))
+      tls_certificates:
+        cert_pem: ((tsdb_alerting_email_receiver_config_0_certificate))
+        private_key_pem: ((tsdb_alerting_email_receiver_config_0_privatekey))
+    - auth_password:
+        secret: ((tsdb_alerting_email_receiver_config_1_auth_password))
+      auth_secret:
+        secret: ((tsdb_alerting_email_receiver_config_1_auth_secret))
+      ca: ((tsdb_alerting_email_receiver_config_1_ca))
+      insecure_skip_verify: ((tsdb_alerting_email_receiver_config_1_insecure_skip_verify))
+      receiver_config: ((tsdb_alerting_email_receiver_config_1_receiver_config))
+      receiver_name: ((tsdb_alerting_email_receiver_config_1_receiver_name))
+      server_name: ((tsdb_alerting_email_receiver_config_1_server_name))
+      tls_certificates:
+        cert_pem: ((tsdb_alerting_email_receiver_config_1_certificate))
+        private_key_pem: ((tsdb_alerting_email_receiver_config_1_privatekey))
+    - auth_password:
+        secret: ((tsdb_alerting_email_receiver_config_2_auth_password))
+      auth_secret:
+        secret: ((tsdb_alerting_email_receiver_config_2_auth_secret))
+      ca: ((tsdb_alerting_email_receiver_config_2_ca))
+      insecure_skip_verify: ((tsdb_alerting_email_receiver_config_2_insecure_skip_verify))
+      receiver_config: ((tsdb_alerting_email_receiver_config_2_receiver_config))
+      receiver_name: ((tsdb_alerting_email_receiver_config_2_receiver_name))
+      server_name: ((tsdb_alerting_email_receiver_config_2_server_name))
+      tls_certificates:
+        cert_pem: ((tsdb_alerting_email_receiver_config_2_certificate))
+        private_key_pem: ((tsdb_alerting_email_receiver_config_2_privatekey))
+    - auth_password:
+        secret: ((tsdb_alerting_email_receiver_config_3_auth_password))
+      auth_secret:
+        secret: ((tsdb_alerting_email_receiver_config_3_auth_secret))
+      ca: ((tsdb_alerting_email_receiver_config_3_ca))
+      insecure_skip_verify: ((tsdb_alerting_email_receiver_config_3_insecure_skip_verify))
+      receiver_config: ((tsdb_alerting_email_receiver_config_3_receiver_config))
+      receiver_name: ((tsdb_alerting_email_receiver_config_3_receiver_name))
+      server_name: ((tsdb_alerting_email_receiver_config_3_server_name))
+      tls_certificates:
+        cert_pem: ((tsdb_alerting_email_receiver_config_3_certificate))
+        private_key_pem: ((tsdb_alerting_email_receiver_config_3_privatekey))
+    - auth_password:
+        secret: ((tsdb_alerting_email_receiver_config_4_auth_password))
+      auth_secret:
+        secret: ((tsdb_alerting_email_receiver_config_4_auth_secret))
+      ca: ((tsdb_alerting_email_receiver_config_4_ca))
+      insecure_skip_verify: ((tsdb_alerting_email_receiver_config_4_insecure_skip_verify))
+      receiver_config: ((tsdb_alerting_email_receiver_config_4_receiver_config))
+      receiver_name: ((tsdb_alerting_email_receiver_config_4_receiver_name))
+      server_name: ((tsdb_alerting_email_receiver_config_4_server_name))
+      tls_certificates:
+        cert_pem: ((tsdb_alerting_email_receiver_config_4_certificate))
+        private_key_pem: ((tsdb_alerting_email_receiver_config_4_privatekey))

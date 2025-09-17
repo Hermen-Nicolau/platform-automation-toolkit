@@ -1,0 +1,3 @@
+- type: replace
+  path: /resource-config?/pas-exporter-counter?/nsx_security_groups?
+  value: ((resource-var-pas-exporter-counter_nsx_security_groups))

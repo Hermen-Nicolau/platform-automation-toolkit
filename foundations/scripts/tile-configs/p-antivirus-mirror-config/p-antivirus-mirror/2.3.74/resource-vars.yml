@@ -1,0 +1,4 @@
+resource-var-antivirus-mirror_instance_type: automatic
+resource-var-antivirus-mirror_instances: automatic
+resource-var-antivirus-mirror_max_in_flight: default
+resource-var-antivirus-mirror_persistent_disk_size: automatic

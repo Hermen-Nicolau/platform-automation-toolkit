@@ -1,0 +1,4 @@
+- type: replace
+  path: /product-properties/.properties.grafana_proxy.enabled.no_proxy?
+  value:
+    value: ((grafana_proxy_enabled_no_proxy))

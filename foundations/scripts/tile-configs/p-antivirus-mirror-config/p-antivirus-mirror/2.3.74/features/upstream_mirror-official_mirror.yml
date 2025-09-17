@@ -1,0 +1,9 @@
+- type: replace
+  path: /product-properties/.properties.upstream_mirror?
+  value:
+    value: official_mirror
+    selected_option: official_mirror
+- type: replace
+  path: /product-properties/.properties.upstream_mirror.official_mirror.official_daily_db_check_frequency?
+  value:
+    value: ((upstream_mirror_official_mirror_official_daily_db_check_frequency))

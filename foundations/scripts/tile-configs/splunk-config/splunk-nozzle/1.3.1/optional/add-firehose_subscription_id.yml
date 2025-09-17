@@ -1,0 +1,4 @@
+- type: replace
+  path: /product-properties/.properties.firehose_subscription_id?
+  value:
+    value: ((firehose_subscription_id))

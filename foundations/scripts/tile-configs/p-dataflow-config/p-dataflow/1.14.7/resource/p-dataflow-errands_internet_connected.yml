@@ -1,0 +1,3 @@
+- type: replace
+  path: /resource-config?/p-dataflow-errands?/internet_connected?
+  value: ((resource-var-p-dataflow-errands_internet_connected))

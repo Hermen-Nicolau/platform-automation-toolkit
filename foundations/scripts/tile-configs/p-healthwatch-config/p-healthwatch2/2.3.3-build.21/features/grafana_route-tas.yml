@@ -1,0 +1,19 @@
+- type: replace
+  path: /product-properties/.properties.grafana_route?
+  value:
+    value: tas
+    selected_option: tas
+- type: remove
+  path: /product-properties/.properties.grafana_route.manual.root_url?
+- type: remove
+  path: /product-properties/.properties.grafana_route.manual.ssl_certificates?
+- type: remove
+  path: /product-properties/.properties.grafana_route.manual.ssl_ca_certificate?
+- type: remove
+  path: /product-properties/.properties.grafana_route.manual.additional_cipher?
+- type: remove
+  path: /product-properties/.properties.grafana_route.manual.http_proxy?
+- type: remove
+  path: /product-properties/.properties.grafana_route.manual.https_proxy?
+- type: remove
+  path: /product-properties/.properties.grafana_route.manual.no_proxy?
