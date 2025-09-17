@@ -1,0 +1,28 @@
+environment_name: lab-1
+
+vpc_id: vpc-0e14501d9456e4348
+username: opsman
+
+# env
+connect-timeout: 30            # default 5
+request-timeout: 1800          # default 1800
+skip-ssl-validation: true     # default false
+
+opsman_host: opsmanager.sbx.viewlifeline.com
+ops_manager_iam_instance_profile_name: sbx-ops-manager
+ops_manager_key_pair_name: sbx-ops-manager-key
+ops_manager_public_ip: 54.188.41.144
+region: us-west-2
+aws_region: us-west-2
+ops_manager_security_group_id: sg-08f16c8d611f82dc8
+ops_manager_subnet_id: subnet-03ace534b63ffab78
+ops_manager_iam_instance_profile_name: sbx-ops-manager
+platform_vms_security_group_id: sg-0b2eeffe71d59d696
+ops_manager_instance_type: m5.large
+
+
+
+gateway: 10.0.16.1
+network_name: infrastructure
+opsman_netmask: 255.255.255.0
+opsman_vm_name: sbx-ops-manager-vm

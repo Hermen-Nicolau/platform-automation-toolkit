@@ -24,4 +24,4 @@ jammy-stemcell-version: "1.894"
 xenial-stemcell-version: "621.969"
 jammy-stemcell-regex: ^1\.894*$ 
 xenial-stemcel-regex: ^621\.958*$
-# ISO SEG Added
+
