@@ -1,0 +1,11 @@
+- type: replace
+  path: /product-properties/.properties.cloud_controller_stacks?
+  value:
+    value: fs3_and_fs4
+    selected_option: fs3_and_fs4_option
+- type: remove
+  path: /product-properties/.properties.cloud_controller_stacks.fs4_only_option.cloud_controller_default_stack?
+- type: replace
+  path: /product-properties/.properties.cloud_controller_stacks.fs3_and_fs4_option.cloud_controller_default_stack?
+  value:
+    value: ((cloud_controller_stacks_fs3_and_fs4_option_cloud_controller_default_stack))

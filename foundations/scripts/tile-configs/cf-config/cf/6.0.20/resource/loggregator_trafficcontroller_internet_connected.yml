@@ -1,0 +1,3 @@
+- type: replace
+  path: /resource-config?/loggregator_trafficcontroller?/internet_connected?
+  value: ((resource-var-loggregator_trafficcontroller_internet_connected))

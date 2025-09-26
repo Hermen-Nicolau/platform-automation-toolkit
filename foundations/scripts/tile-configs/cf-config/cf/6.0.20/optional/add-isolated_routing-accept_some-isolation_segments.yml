@@ -1,0 +1,4 @@
+- type: replace
+  path: /product-properties/.properties.isolated_routing.accept_some.isolation_segments?
+  value:
+    value: ((isolated_routing_accept_some_isolation_segments))

@@ -1,0 +1,5 @@
+- type: replace
+  path: /product-properties/.properties.router_only_trust_client_ca_certs?
+  value:
+    value: enable
+    selected_option: enable

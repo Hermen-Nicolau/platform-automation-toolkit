@@ -1,0 +1,14 @@
+- type: replace
+  path: /product-properties/.properties.mtls_syslog_agent_aggregate_drains?
+  value:
+    value:
+    - ca: ((mtls_syslog_agent_aggregate_drains_0_ca))
+      cert:
+        cert_pem: ((mtls_syslog_agent_aggregate_drains_0_certificate))
+        private_key_pem: ((mtls_syslog_agent_aggregate_drains_0_privatekey))
+      url: ((mtls_syslog_agent_aggregate_drains_0_url))
+    - ca: ((mtls_syslog_agent_aggregate_drains_1_ca))
+      cert:
+        cert_pem: ((mtls_syslog_agent_aggregate_drains_1_certificate))
+        private_key_pem: ((mtls_syslog_agent_aggregate_drains_1_privatekey))
+      url: ((mtls_syslog_agent_aggregate_drains_1_url))

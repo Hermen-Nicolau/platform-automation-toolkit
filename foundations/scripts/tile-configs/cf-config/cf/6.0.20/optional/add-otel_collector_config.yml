@@ -1,0 +1,4 @@
+- type: replace
+  path: /product-properties/.properties.otel_collector_config?
+  value:
+    value: ((otel_collector_config))

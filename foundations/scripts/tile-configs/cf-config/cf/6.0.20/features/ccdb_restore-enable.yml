@@ -1,0 +1,10 @@
+- type: replace
+  path: /product-properties/.properties.ccdb_restore?
+  value:
+    value: enable
+    selected_option: enable
+- type: replace
+  path: /product-properties/.properties.ccdb_restore.enable.encrypt_key?
+  value:
+    value:
+      secret: ((ccdb_restore_enable_encrypt_key))

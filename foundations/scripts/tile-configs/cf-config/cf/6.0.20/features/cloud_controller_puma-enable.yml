@@ -1,0 +1,17 @@
+- type: replace
+  path: /product-properties/.properties.cloud_controller_puma?
+  value:
+    value: enable
+    selected_option: enable
+- type: replace
+  path: /product-properties/.properties.cloud_controller_puma.enable.workers?
+  value:
+    value: ((cloud_controller_puma_enable_workers))
+- type: replace
+  path: /product-properties/.properties.cloud_controller_puma.enable.max_threads?
+  value:
+    value: ((cloud_controller_puma_enable_max_threads))
+- type: replace
+  path: /product-properties/.properties.cloud_controller_puma.enable.max_db_connections_per_process?
+  value:
+    value: ((cloud_controller_puma_enable_max_db_connections_per_process))
