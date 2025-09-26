@@ -1,0 +1,15 @@
+---
+pivnet-api-token: ((pivnet_token))
+#pivnet-file-glob: "*aws*"       # must be quoted if starting with a *
+pivnet-file-glob: "bosh-*aws*"
+pivnet-product-slug: stemcells-ubuntu-xenial
+#pivnet-product-slug: stemcells-ubuntu-xenial
+# Either product-version OR product-version-regex is required
+product-version-regex: ((xenial-stemcel-regex))  # must not be quoted
+#product-version: "((xenial-stemcell-version))""
+
+# Optional
+# pivnet-disable-ssl: true  # default - false
+# blobstore-bucket: bucket  # if set, product files will have their slug and
+                            # version prepended. Set if the product will
+                            # ever be stored in a blobstorex
