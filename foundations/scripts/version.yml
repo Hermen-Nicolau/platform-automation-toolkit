@@ -1,0 +1,27 @@
+opsman-version: 3.0.37
+cf-version: 6.0.19+LTS-T #changed from TAS to CF for consitency between the files names
+p-isolation-segment-version: 6.0.19+LTS-T
+p-healthwatch2-version: 2.3.3
+p-healthwatch2-pas-exporter-version: 2.3.3
+appMetrics-version: 2.3.1
+metric-store-version: 1.8.0
+pivotal-mysql-version: 3.3.2
+new-relic-dotnet-buildpack-version: 1.1.13
+nr-firehose-nozzle-version: 2.10.0
+newrelic-broker-version: 1.12.36
+p-rabbitmq-version: 2.4.2
+p-redis-version: 4.0.1
+p-dataflow-version: 1.14.7
+p-scheduler-version: 2.0.19
+p_spring-cloud-services-version: 3.3.8
+splunk-nozzle-version: 1.3.1
+pivotal_single_sign-on_service-version: 1.16.11
+pivotal-telemetry-om-version: 2.2.0
+p-antivirus-version: 2.3.74
+p-antivirus-mirror-version: 2.3.74
+p-fim-version: 2.1.47
+jammy-stemcell-version: "1.894"
+xenial-stemcell-version: "621.969"
+jammy-stemcell-regex: ^1\.894*$ 
+xenial-stemcel-regex: ^621\.958*$
+
