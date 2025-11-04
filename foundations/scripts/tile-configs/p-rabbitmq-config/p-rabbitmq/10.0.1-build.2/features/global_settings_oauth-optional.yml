@@ -1,0 +1,5 @@
+- type: replace
+  path: /product-properties/.properties.global_settings_oauth?
+  value:
+    value: optional
+    selected_option: optional

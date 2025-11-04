@@ -60,7 +60,6 @@ function select_foundation () {
   echo "The foundation selected is: ${FOUNDATIONS[$foundation]}"
   FOUNDATION_NAME=${FOUNDATIONS[$foundation]}
 
-  
 }
 
 #####DONE##### Read the versions.yml file and output the first column which are the products deployed
@@ -89,6 +88,8 @@ function select_product (){
 function select_product_version () {
 
   select_product
+  echo $PRODUCT
+  
   VERSIONS=$(curlit api/v2/products/$PRODUCT/releases | jq -r '.releases[].version' | sort -V)
   if [[ ${PRODUCT} == "p-concourse" ]]; then
     VERSIONS="7.9.1+LTS-T 7.11.2+LTS-T"
@@ -104,14 +105,81 @@ function select_product_version () {
   PRODUCT_VERSION=${PRODUCT_VERSIONS[$version]}
 }
 
-function compare_products (){
+function select_glob (){
   select_product_version
 
+  echo "PRODUCT: $PRODUCT"
+  echo "PRODUCT_VERSION: $PRODUCT_VERSION"
 
+  PRODUCT_METADATA=$(curlit api/v2/products/$PRODUCT/releases | jq -r '.releases[] | select(.version == '\"$PRODUCT_VERSION\"') | "\(.description)|\(.became_ga_at)|\(.release_date)|\(.end_of_support_date)|\(.release_notes_url)|\(.id)"')
+  PRODUCT_ID=$(echo $PRODUCT_METADATA | cut -d '|' -f6)
+  echo "PRODUCT_ID: $PRODUCT_ID"
+  GLOBS=$(curlit api/v2/products/$PRODUCT/releases/$PRODUCT_ID/product_files | jq -r '.product_files[].aws_object_key' | cut -d '/' -f2)
+
+  declare -a PRODUCT_GLOBS=(${GLOBS})
+
+  for index in ${!PRODUCT_GLOBS[@]}; do
+    printf "%4d: %s\n" $index ${PRODUCT_GLOBS[$index]}
+  done
+
+  read -p 'Choose a product file glob: ' glob
+  echo "You chose: ${PRODUCT_GLOBS[$glob]}"
+  PRODUCT_GLOB=${PRODUCT_GLOBS[$glob]}
 
 }
 
-compare_products
+
+function get_new_product_templates (){
+  select_glob
+  echo "PRODUCT: $PRODUCT"
+  echo "PRODUCT_VERSION: $PRODUCT_VERSION"
+  echo "PRODUCT_GLOB: $PRODUCT_GLOB"
+
+
+  ## Show the diff directly into the terminal, not in a file 
+  ## Best way to compare - talk with 
+
+  echo "Generating configuration for new product $PRODUCT"
+  # ---- Accept the Pivnet EULA
+  echo "Accepting the Pivnet EULA"
+  pivnet login --api-token=$PIVNET_TOKEN
+  pivnet accept-eula -p ${PRODUCT} -r ${PRODUCT_VERSION}
+
+  # ---- Execute om config-template 
+  tmpdir=tile-configs/${PRODUCT}-config
+  mkdir -p ${tmpdir}
+
+  om config-template --output-directory=${tmpdir} --pivnet-api-token ${PIVNET_TOKEN} --pivnet-product-slug  ${PRODUCT} --product-version ${PRODUCT_VERSION} --pivnet-file-glob ${PRODUCT_GLOB}
+
+  if [[ ${PRODUCT} == "vmware-nsx-t" ]]; then
+    if [[ ${PRODUCT_VERSION} == "3.2.2.2" ]]; then
+      PRODUCT_VERSION="3.2.1707xxx"
+    elif [[ ${version} == "3.2.2" ]]; then
+      PRODUCT_VERSION="3.2.16xxx"
+    fi
+  fi
+
+  lts_substring="+LTS-T"
+  if [[ ${PRODUCT} == "cf" || ${PRODUCT} == "pas-windows" ]]; then
+    # don't really need the if check
+    # this takes the ${version} and remove the template which is defined as anything ending in "+LTS-T"
+    # if the result is empty (-z), then the ${version} did in fact end with that suffix
+    # if [[ -z ${version##*$lts_substring} ]]; then
+      # Remove the suffix defined in ${lts_substring} from ${version}
+      PRODUCT_VERSION=${PRODUCT_VERSION%$lts_substring*}
+    # fi
+  fi
+
+  wrkdir=$(find ${tmpdir}/${PRODUCT} -name "${PRODUCT_VERSION}*")
+  if [ ! -f ${wrkdir}/product.yml ]; then
+    echo "Something wrong with configuration as expecting ${wrkdir}/product.yml to exist"
+    exit 1
+  fi
+
+}
+
+get_new_product_templates
+
 
 
 

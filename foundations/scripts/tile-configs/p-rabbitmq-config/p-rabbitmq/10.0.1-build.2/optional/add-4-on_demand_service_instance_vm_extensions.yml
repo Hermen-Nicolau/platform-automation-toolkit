@@ -1,0 +1,8 @@
+- type: replace
+  path: /product-properties/.properties.on_demand_service_instance_vm_extensions?
+  value:
+    value:
+    - vm_extension: ((on_demand_service_instance_vm_extensions_0_vm_extension))
+    - vm_extension: ((on_demand_service_instance_vm_extensions_1_vm_extension))
+    - vm_extension: ((on_demand_service_instance_vm_extensions_2_vm_extension))
+    - vm_extension: ((on_demand_service_instance_vm_extensions_3_vm_extension))
