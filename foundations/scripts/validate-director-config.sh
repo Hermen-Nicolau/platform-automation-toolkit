@@ -3,7 +3,7 @@
 
 iaas=$1
 environment_name=$2
-product=$3
+product=director
 
 echo "Validating configuration for product $product"
 
