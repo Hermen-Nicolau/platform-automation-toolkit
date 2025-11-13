@@ -230,4 +230,32 @@ touch ../${IAAS}/common/${PRODUCT}.yml
 
 echo "Generation of configuration files has succeeded."
 
+
+# ---- Prune unused variables from defaults file using grep and awk
+defaults_file="../${IAAS}/${FOUNDATION_NAME}/config/defaults/${PRODUCT}.yml"
+template_file="../${IAAS}/${FOUNDATION_NAME}/config/templates/${PRODUCT}.yml"
+
+if [ -f "${defaults_file}" ] && [ -f "${template_file}" ]; then
+  echo "Pruning unused variables from defaults file..."
+
+  # Extract all ((var_name)) references from the template
+  used_vars=$(grep -o '\(\([^()]*\)\)' "${template_file}" | tr -d '()' | sort -u)
+
+  # Create a temp file to store cleaned defaults
+  tmp_cleaned=$(mktemp)
+
+  # Read the defaults file line by line
+  while IFS= read -r line; do
+    # Extract the variable name from the line (before the colon)
+    varname=$(echo "$line" | sed -n 's/^\([^:]*\):.*/\1/p')
+    if [ -n "$varname" ] && echo "$used_vars" | grep -qx "$varname"; then
+      echo "$line" >> "$tmp_cleaned"
+    fi
+  done < "$defaults_file"
+
+  mv "$tmp_cleaned" "$defaults_file"
+  echo "Removed unused variables from defaults file."
+fi
+
+
 ######### end of generate-config
