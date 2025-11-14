@@ -1,0 +1,12 @@
+cloud_controller_apps_domain: app.domain
+cloud_controller_system_domain: sys.domain
+credhub_internal_provider_keys_0_key: key1
+credhub_internal_provider_keys_0_name: credhub-key
+network_name: tas-network
+networking_poe_ssl_certs_0_certificate: certificate
+networking_poe_ssl_certs_0_name: certificate-name
+networking_poe_ssl_certs_0_privatekey: private-key
+security_acknowledgement: X
+singleton_availability_zone: az1
+uaa_service_provider_key_credentials_certificate: uaa-certificate
+uaa_service_provider_key_credentials_privatekey: uaa-privatekey

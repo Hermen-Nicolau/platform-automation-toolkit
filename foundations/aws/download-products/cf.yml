@@ -1,0 +1,8 @@
+---
+pivnet-api-token: 6f758e296a384afd840095f4f217ff38-r
+pivnet-file-glob: "cf-*.pivotal"       # must be quoted if starting with a *
+pivnet-product-slug: elastic-runtime
+
+# Either product-version OR product-version-regex is required
+# product-version-regex: ^1\.2\..*$ # must not be quoted
+product-version: ((cf-version))
