@@ -239,7 +239,7 @@ if [ -f "${defaults_file}" ] && [ -f "${template_file}" ]; then
   echo "Pruning unused variables from defaults file..."
 
   # Extract all ((var_name)) references from the template
-  used_vars=$(grep -o '\(\([^()]*\)\)' "${template_file}" | tr -d '()' | sort -u)
+  used_vars=$(grep -o '\(\([^()]*\)\)' "${template_file}" | tr -d '()' | sort -u | grep -v ":")
 
   # Create a temp file to store cleaned defaults
   tmp_cleaned=$(mktemp)
@@ -247,7 +247,8 @@ if [ -f "${defaults_file}" ] && [ -f "${template_file}" ]; then
   # Read the defaults file line by line
   while IFS= read -r line; do
     # Extract the variable name from the line (before the colon)
-    varname=$(echo "$line" | sed -n 's/^\([^:]*\):.*/\1/p')
+    ###ANOTHER WAY of doing it --->. varname=$(echo "$line" | sed -n 's/^\([^:]*\):.*/\1/p')
+    varname=$(echo "$line" | awk -F ":" '{print $1}')
     if [ -n "$varname" ] && echo "$used_vars" | grep -qx "$varname"; then
       echo "$line" >> "$tmp_cleaned"
     fi
