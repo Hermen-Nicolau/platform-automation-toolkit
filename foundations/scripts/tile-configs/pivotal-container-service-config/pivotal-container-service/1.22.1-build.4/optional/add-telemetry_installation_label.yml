@@ -1,0 +1,4 @@
+- type: replace
+  path: /product-properties/.properties.telemetry_installation_label?
+  value:
+    value: ((telemetry_installation_label))

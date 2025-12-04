@@ -1,0 +1,5 @@
+- type: replace
+  path: /product-properties/.properties.private_registries_selector?
+  value:
+    value: disabled
+    selected_option: disabled

@@ -1,0 +1,4 @@
+- type: replace
+  path: /product-properties/.properties.telemetry_customer_number?
+  value:
+    value: ((telemetry_customer_number))

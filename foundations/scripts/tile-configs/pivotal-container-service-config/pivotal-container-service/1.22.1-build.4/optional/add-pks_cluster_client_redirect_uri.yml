@@ -1,0 +1,4 @@
+- type: replace
+  path: /product-properties/.properties.pks_cluster_client_redirect_uri?
+  value:
+    value: ((pks_cluster_client_redirect_uri))

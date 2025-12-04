@@ -1,0 +1,4 @@
+- type: replace
+  path: /product-properties/.properties.syslog_selector.enabled.custom_rule?
+  value:
+    value: ((syslog_selector_enabled_custom_rule))

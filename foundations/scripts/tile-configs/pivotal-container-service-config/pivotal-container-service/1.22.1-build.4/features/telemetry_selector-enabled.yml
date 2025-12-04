@@ -1,0 +1,17 @@
+- type: replace
+  path: /product-properties/.properties.telemetry_selector?
+  value:
+    value: enabled
+    selected_option: enabled
+- type: replace
+  path: /product-properties/.properties.telemetry_selector.enabled.telemetry_url?
+  value:
+    value: ((telemetry_selector_enabled_telemetry_url))
+- type: replace
+  path: /product-properties/.properties.telemetry_selector.enabled.telemetry_polling_interval?
+  value:
+    value: ((telemetry_selector_enabled_telemetry_polling_interval))
+- type: replace
+  path: /product-properties/.properties.telemetry_selector.enabled.environment_provider?
+  value:
+    value: ((telemetry_selector_enabled_environment_provider))
