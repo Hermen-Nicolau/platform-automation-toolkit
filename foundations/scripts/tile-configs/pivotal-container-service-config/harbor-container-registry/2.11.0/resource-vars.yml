@@ -1,0 +1,5 @@
+resource-var-harbor-app_instance_type: automatic
+resource-var-harbor-app_max_in_flight: default
+resource-var-harbor-app_persistent_disk_size: automatic
+resource-var-smoke-testing_instance_type: automatic
+resource-var-smoke-testing_max_in_flight: default

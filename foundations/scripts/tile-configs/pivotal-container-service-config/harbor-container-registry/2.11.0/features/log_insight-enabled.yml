@@ -1,0 +1,17 @@
+- type: replace
+  path: /product-properties/.properties.log_insight?
+  value:
+    value: enabled
+    selected_option: enabled
+- type: replace
+  path: /product-properties/.properties.log_insight.enabled.host?
+  value:
+    value: ((log_insight_enabled_host))
+- type: replace
+  path: /product-properties/.properties.log_insight.enabled.protocol?
+  value:
+    value: ((log_insight_enabled_protocol))
+- type: replace
+  path: /product-properties/.properties.log_insight.enabled.port?
+  value:
+    value: ((log_insight_enabled_port))

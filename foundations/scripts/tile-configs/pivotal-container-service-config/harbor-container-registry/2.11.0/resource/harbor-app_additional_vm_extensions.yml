@@ -1,0 +1,3 @@
+- type: replace
+  path: /resource-config?/harbor-app?/additional_vm_extensions?
+  value: ((resource-var-harbor-app_additional_vm_extensions))

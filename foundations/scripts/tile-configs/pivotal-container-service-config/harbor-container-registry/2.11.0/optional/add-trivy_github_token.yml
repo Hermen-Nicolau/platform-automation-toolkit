@@ -1,0 +1,4 @@
+- type: replace
+  path: /product-properties/.properties.trivy_github_token?
+  value:
+    value: ((trivy_github_token))

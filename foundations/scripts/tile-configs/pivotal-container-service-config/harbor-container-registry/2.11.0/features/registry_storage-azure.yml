@@ -1,0 +1,21 @@
+- type: replace
+  path: /product-properties/.properties.registry_storage?
+  value:
+    value: azure
+    selected_option: azure
+- type: replace
+  path: /product-properties/.properties.registry_storage.azure.accountname?
+  value:
+    value: ((registry_storage_azure_accountname))
+- type: replace
+  path: /product-properties/.properties.registry_storage.azure.accountkey?
+  value:
+    value: ((registry_storage_azure_accountkey))
+- type: replace
+  path: /product-properties/.properties.registry_storage.azure.container?
+  value:
+    value: ((registry_storage_azure_container))
+- type: replace
+  path: /product-properties/.properties.registry_storage.azure.realm?
+  value:
+    value: ((registry_storage_azure_realm))

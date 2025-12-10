@@ -1,0 +1,6 @@
+admin_password: ""
+hostname: ""
+network_name: ""
+server_cert_key_certificate: ""
+server_cert_key_privatekey: ""
+singleton_availability_zone: ""

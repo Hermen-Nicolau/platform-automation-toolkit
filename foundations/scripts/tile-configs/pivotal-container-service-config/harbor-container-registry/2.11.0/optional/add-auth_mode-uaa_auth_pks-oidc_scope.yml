@@ -1,0 +1,4 @@
+- type: replace
+  path: /product-properties/.properties.auth_mode.uaa_auth_pks.oidc_scope?
+  value:
+    value: ((auth_mode_uaa_auth_pks_oidc_scope))

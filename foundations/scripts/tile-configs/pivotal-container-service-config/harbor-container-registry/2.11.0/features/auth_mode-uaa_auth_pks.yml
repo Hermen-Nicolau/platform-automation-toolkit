@@ -1,0 +1,9 @@
+- type: replace
+  path: /product-properties/.properties.auth_mode?
+  value:
+    value: uaa_auth_pks
+    selected_option: uaa_auth_pks
+- type: replace
+  path: /product-properties/.properties.auth_mode.uaa_auth_pks.is_saml_backend?
+  value:
+    value: ((auth_mode_uaa_auth_pks_is_saml_backend))

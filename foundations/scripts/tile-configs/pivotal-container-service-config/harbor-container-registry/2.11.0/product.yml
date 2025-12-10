@@ -1,0 +1,54 @@
+product-name: harbor-container-registry
+network-properties:
+  network:
+    name: ((network_name))
+  other_availability_zones:
+  - name: ((singleton_availability_zone))
+  singleton_availability_zone:
+    name: ((singleton_availability_zone))
+product-properties:
+  .properties.admin_password:
+    value:
+      secret: ((admin_password))
+  .properties.auth_mode:
+    value: db_auth
+  .properties.customize_container_network:
+    value: default
+  .properties.hostname:
+    value: ((hostname))
+  .properties.initial_delay_minutes:
+    value: ((initial_delay_minutes))
+  .properties.log_insight:
+    value: disabled
+  .properties.no_proxy:
+    value: ((no_proxy))
+  .properties.registry_storage:
+    value: filesystem
+  .properties.server_cert_key:
+    value:
+      cert_pem: ((server_cert_key_certificate))
+      private_key_pem: ((server_cert_key_privatekey))
+  .properties.trivy_offline_scan:
+    value: ((trivy_offline_scan))
+  .properties.trivy_skip_update:
+    value: ((trivy_skip_update))
+  .properties.vm_monitor:
+    value: no_monitor
+  .properties.with_trivy:
+    value: ((with_trivy))
+resource-config:
+  harbor-app:
+    instance_type:
+      id: ((resource-var-harbor-app_instance_type))
+    persistent_disk:
+      size_mb: ((resource-var-harbor-app_persistent_disk_size))
+    max_in_flight: ((resource-var-harbor-app_max_in_flight))
+  smoke-testing:
+    instance_type:
+      id: ((resource-var-smoke-testing_instance_type))
+    max_in_flight: ((resource-var-smoke-testing_max_in_flight))
+errand-config:
+  smoke-testing:
+    post-deploy-state: ((smoke-testing_post_deploy_state))
+  uaa-deregistration:
+    pre-delete-state: ((uaa-deregistration_pre_delete_state))

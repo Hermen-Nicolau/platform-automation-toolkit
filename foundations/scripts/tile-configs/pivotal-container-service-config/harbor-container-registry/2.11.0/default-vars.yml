@@ -1,0 +1,5 @@
+initial_delay_minutes: 60
+no_proxy: 127.0.0.1,localhost,.local,.internal,log,db,redis,nginx,core,portal,postgresql,jobservice,registry,registryctl,clair-adapter,chartmuseum,notary-server
+trivy_offline_scan: true
+trivy_skip_update: false
+with_trivy: true

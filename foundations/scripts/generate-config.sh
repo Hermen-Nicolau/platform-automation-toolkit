@@ -235,19 +235,23 @@ echo "Generation of configuration files has succeeded."
 defaults_file="../${IAAS}/${FOUNDATION_NAME}/config/defaults/${PRODUCT}.yml"
 template_file="../${IAAS}/${FOUNDATION_NAME}/config/templates/${PRODUCT}.yml"
 
-if [ -f "${defaults_file}" ] && [ -f "${template_file}" ]; then
+
+if [ -f "${defaults_file}" ] && [ -f "${template_file}" ] && [ ${IAAS} == "vsphere" ] && ( [ ${PRODUCT} == "cf" ] || [ ${PRODUCT} == "pivotal-container" ] ); then
   echo "Pruning unused variables from defaults file..."
 
   # Extract all ((var_name)) references from the template
-  used_vars=$(grep -o '\(\([^()]*\)\)' "${template_file}" | tr -d '()' | sort -u | grep -v ":")
+  #used_vars=$(grep -o '\(\([^()]*\)\)' "${template_file}" | tr -d '()' | sort -u | grep -v ":")
+  used_vars=$(grep -o '\(\([^()]*\)\)' "${template_file}" | tr -d '()' | grep -v ":")
+
+
 
   # Create a temp file to store cleaned defaults
   tmp_cleaned=$(mktemp)
 
   # Read the defaults file line by line
   while IFS= read -r line; do
-    # Extract the variable name from the line (before the colon)
-    ###ANOTHER WAY of doing it --->. varname=$(echo "$line" | sed -n 's/^\([^:]*\):.*/\1/p')
+    # Extract the variable name from the line (before the colon)    
+    #varname=$(echo "$line" | sed -n 's/^\([^:]*\):.*/\1/p') ### some other way to do it
     varname=$(echo "$line" | awk -F ":" '{print $1}')
     if [ -n "$varname" ] && echo "$used_vars" | grep -qx "$varname"; then
       echo "$line" >> "$tmp_cleaned"
